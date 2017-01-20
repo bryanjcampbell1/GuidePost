@@ -47,9 +47,9 @@ class CreatePageTwoViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func addPic(_ sender: AnyObject) {
-        print(update())
+    @IBAction func addPicture(_ sender: AnyObject) {
     }
+
     @IBAction func save(_ sender: AnyObject) {
         print(update())
     }

@@ -47,11 +47,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // remove home view controller?  -->  doesnt reall add much --> adds in tableView?
 //
 //change the filters in searchVC to be segmented control
-//remove addPic from creation and have uses upload pics at the end
 //
 //make more complete --> multiple spots -->
 //add paywall
 
+//UI
+//1) Remove placeholder text in description fields
+//2) Have "Add Picture" button actually bring up a cameraview
+//3) Create arrays to store entered pics and descriptions
+//4) Bundle these entered values into eventObjects
+//
+
+//Are your nights out the best in the city?  Do you get into weird exotic situations?  Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn bitcoin for their hard work!
 
 
 
