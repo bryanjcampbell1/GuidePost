@@ -52,9 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //make more complete --> multiple spots -->
 //add paywall
 
-//tableview in searchVC ---> 2 functions
-// i) if tv is tapped and listOfEvents = Nil --> then search db based on tag pressed--> create new array to hold popular tags
-
 
 
 

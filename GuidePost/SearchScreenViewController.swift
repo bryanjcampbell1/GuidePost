@@ -34,8 +34,10 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
     let cellReuseIdentifier = "cell"
     
     //Array of events
-    var listOfEvents: NSMutableArray = []
-    
+    var listOfEvents:  NSMutableArray = []
+    //var titleOfEvents: NSMutableArray = []
+    var titleOfEvents: [String] = []
+    //var arrayOfInts: [Int]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,13 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
     
     // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if listOfEvents.count == 0 {
         return self.tagsArray.count
+        }
+        else{
+          return self.listOfEvents.count
+        }
     }
     
     // create a cell for each table view row
@@ -60,8 +68,15 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         // create a new cell if needed or reuse an old one
         let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as UITableViewCell!
         
+        
+        
         // set the text from the data model
+         if listOfEvents.count == 0 {
         cell.textLabel?.text = self.tagsArray[(indexPath as NSIndexPath).row]
+        }
+         else{
+            cell.textLabel?.text = self.titleOfEvents[(indexPath as NSIndexPath).row]
+        }
         
         return cell
     }
@@ -70,11 +85,12 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \((indexPath as NSIndexPath).row).")
         
-        if listOfEvents == nil || listOfEvents.count == 0 { //Check warning -->may always throw nil
+        if listOfEvents.count == 0 {
             print("There are no objects")
             
             // search under tag and refresh tableView
-            
+            searchFunction(w:tagsArray[(indexPath as NSIndexPath).row], x:"", y: "", z: "Best Rated")
+            print("search for" + tagsArray[(indexPath as NSIndexPath).row])
         }
         else {
         
@@ -90,16 +106,16 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
     
     
     @IBAction func searchAction(_ sender: AnyObject) {
-        searchFunction(x: searchTextField.text!, y: locationTextField.text!, z: "Best Rated") //change rating buttons to segmented contol
+        searchFunction(w:"", x: searchTextField.text!, y: locationTextField.text!, z: "Best Rated") //change rating buttons to segmented contol
         
     }
     
     @IBAction func locationAction(_ sender: AnyObject) {
-        searchFunction(x: searchTextField.text!, y: locationTextField.text!, z: "Best Rated")
+        searchFunction(w:"", x: searchTextField.text!, y: locationTextField.text!, z: "Best Rated")
     }
     
     
-    func searchFunction(x: String, y: String, z:String) {
+    func searchFunction(w:String,  x: String, y: String, z:String ) {
         //1) connect to db
         //2) query db with x,y,z
         //3) return ordered data from db
@@ -146,10 +162,30 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         
         //----------------------------------------------------------------------------------------------//
         
-        listOfEvents = [newEvent, newEvent2, newEvent3] //this should be done iside query function
+        listOfEvents = [newEvent, newEvent2, newEvent3]
         
-    }
-    
+    /*
+        //reload tableview with titles of found events
+        for index in 0...listOfEvents.count {
+            
+            
+            
+            titleOfEvents.append()
+            index
+        }
+        */
+        
+        for var i in (0..<listOfEvents.count)
+        {
+            var placeholder = EventObject()
+            placeholder = listOfEvents[i] as! EventObject
+            
+            titleOfEvents.append(placeholder.EventName!)
+        }
+        print(titleOfEvents.count)
+        
+        self.tableView.reloadData()
+}
     
     
     
