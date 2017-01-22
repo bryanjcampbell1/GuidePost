@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CreatePageTwoViewController: UIViewController {
+class CreatePageTwoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     @IBOutlet weak var headerImage: UIImageView!
@@ -30,6 +30,9 @@ class CreatePageTwoViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     
+    @IBOutlet var imageView: UIImageView!
+    let imagePicker = UIImagePickerController()
+    
     var pageCounter : Int = 0
     var someEvent = EventObject() //learn how to import this from previous vc
     
@@ -39,6 +42,7 @@ class CreatePageTwoViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         pageCounter = 1
         
+        imagePicker.delegate = self
         
     }
     
@@ -48,6 +52,7 @@ class CreatePageTwoViewController: UIViewController {
     }
 
     @IBAction func addPicture(_ sender: AnyObject) {
+
     }
 
     @IBAction func save(_ sender: AnyObject) {
@@ -129,6 +134,21 @@ class CreatePageTwoViewController: UIViewController {
         let message = "Updated eventObject!"
         someEvent.saveEventObject()
         return message
+    }
+    
+    // MARK: - UIImagePickerControllerDelegate Methods
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.contentMode = .scaleAspectFit
+            imageView.image = pickedImage
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
     
 }

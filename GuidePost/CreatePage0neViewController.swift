@@ -74,7 +74,7 @@ class CreatePageOneViewController: UIViewController {
         newEvent.EventName = nameTextField.text
         newEvent.FirstAddress = addressTextField.text
         newEvent.MainDescription = descriptionOfAdventure.text
-        newEvent.MainPicture = adventurePic.image
+      //  newEvent.MainPicture = adventurePic.image
         
         newEvent.saveEventObject()
         

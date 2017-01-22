@@ -52,11 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall
 
 //UI
-//1) Remove placeholder text in description fields
+//1) Remove placeholder text in description fields  --> Done
 //2) Have "Add Picture" button actually bring up a cameraview
 //3) Create arrays to store entered pics and descriptions
 //4) Bundle these entered values into eventObjects
-//
+//5) Deal appropriately with "pagecounter" in CPTVC
 
 //Are your nights out the best in the city?  Do you get into weird exotic situations?  Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn bitcoin for their hard work!
 

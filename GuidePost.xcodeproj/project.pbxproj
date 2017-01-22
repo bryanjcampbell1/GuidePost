@@ -26,6 +26,7 @@
 		FDEBE6801D874ED600D39D1C /* CreatePage0neViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBE67F1D874ED600D39D1C /* CreatePage0neViewController.swift */; };
 		FDEBE6821D874F0C00D39D1C /* CreatePageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBE6811D874F0C00D39D1C /* CreatePageTwoViewController.swift */; };
 		FDEBE6841D874F5800D39D1C /* SetPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBE6831D874F5800D39D1C /* SetPriceViewController.swift */; };
+		FDEF79311E35578D00106985 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF79301E35578C00106985 /* AddImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		FDEBE67F1D874ED600D39D1C /* CreatePage0neViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePage0neViewController.swift; sourceTree = "<group>"; };
 		FDEBE6811D874F0C00D39D1C /* CreatePageTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePageTwoViewController.swift; sourceTree = "<group>"; };
 		FDEBE6831D874F5800D39D1C /* SetPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPriceViewController.swift; sourceTree = "<group>"; };
+		FDEF79301E35578C00106985 /* AddImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddImageViewController.swift; path = ../AddImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				FDEBE67D1D874E6E00D39D1C /* CreateAdventureViewController.swift */,
 				FDEBE67F1D874ED600D39D1C /* CreatePage0neViewController.swift */,
 				FDEBE6811D874F0C00D39D1C /* CreatePageTwoViewController.swift */,
+				FDEF79301E35578C00106985 /* AddImageViewController.swift */,
 				FDEBE6831D874F5800D39D1C /* SetPriceViewController.swift */,
 				FDEBE6751D874C6B00D39D1C /* AdventureFrontPageUserViewController.swift */,
 				FDEBE6791D874D1400D39D1C /* MapPageViewController.swift */,
@@ -260,6 +263,7 @@
 				FDEBE6761D874C6B00D39D1C /* AdventureFrontPageUserViewController.swift in Sources */,
 				FDEBE6741D874C3100D39D1C /* SearchScreenViewController.swift in Sources */,
 				FDEBE6721D87439100D39D1C /* HomeScreenViewController.swift in Sources */,
+				FDEF79311E35578D00106985 /* AddImageViewController.swift in Sources */,
 				FDEBE67A1D874D1400D39D1C /* MapPageViewController.swift in Sources */,
 				FD4C89A71E2987AD00207AF2 /* EventObjectClass.swift in Sources */,
 				FDEBE6521D80DAC600D39D1C /* AppDelegate.swift in Sources */,
