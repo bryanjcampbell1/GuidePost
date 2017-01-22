@@ -457,7 +457,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-TZ-MzF">
                                 <state key="normal" title="Add Picture"/>
                                 <connections>
-                                    <action selector="addPicture:" destination="h8c-Lq-JIL" eventType="touchUpInside" id="PUZ-wS-RM6"/>
                                     <segue destination="ZfH-Na-6F3" kind="show" id="wLN-d4-l4B"/>
                                 </connections>
                             </button>

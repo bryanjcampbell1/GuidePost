@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CreatePageTwoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreatePageTwoViewController: UIViewController {
     
     
     @IBOutlet weak var headerImage: UIImageView!
@@ -42,8 +42,6 @@ class CreatePageTwoViewController: UIViewController, UIImagePickerControllerDele
         // Do any additional setup after loading the view, typically from a nib.
         pageCounter = 1
         
-        imagePicker.delegate = self
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -51,9 +49,6 @@ class CreatePageTwoViewController: UIViewController, UIImagePickerControllerDele
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func addPicture(_ sender: AnyObject) {
-
-    }
 
     @IBAction func save(_ sender: AnyObject) {
         print(update())
@@ -135,21 +130,7 @@ class CreatePageTwoViewController: UIViewController, UIImagePickerControllerDele
         someEvent.saveEventObject()
         return message
     }
-    
-    // MARK: - UIImagePickerControllerDelegate Methods
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.contentMode = .scaleAspectFit
-            imageView.image = pickedImage
-        }
-        
-        dismiss(animated: true, completion: nil)
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
+
     
 }
 
