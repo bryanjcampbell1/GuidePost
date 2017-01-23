@@ -27,6 +27,7 @@
 		FDEBE6821D874F0C00D39D1C /* CreatePageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBE6811D874F0C00D39D1C /* CreatePageTwoViewController.swift */; };
 		FDEBE6841D874F5800D39D1C /* SetPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBE6831D874F5800D39D1C /* SetPriceViewController.swift */; };
 		FDEF79311E35578D00106985 /* AddImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF79301E35578C00106985 /* AddImageViewController.swift */; };
+		FDEF79AB1E3599D300106985 /* NewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEF79AA1E3599D300106985 /* NewCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		FDEBE6811D874F0C00D39D1C /* CreatePageTwoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePageTwoViewController.swift; sourceTree = "<group>"; };
 		FDEBE6831D874F5800D39D1C /* SetPriceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPriceViewController.swift; sourceTree = "<group>"; };
 		FDEF79301E35578C00106985 /* AddImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddImageViewController.swift; path = ../AddImageViewController.swift; sourceTree = "<group>"; };
+		FDEF79AA1E3599D300106985 /* NewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				FDEBE6771D874CB400D39D1C /* StopUserViewController.swift */,
 				FDEBE67B1D874D5300D39D1C /* RateAdventureViewController.swift */,
 				FDEBE6551D80DAC600D39D1C /* Main.storyboard */,
+				FDEF79AA1E3599D300106985 /* NewCollectionViewCell.swift */,
 				FD4C89AA1E2C054300207AF2 /* images.jpg */,
 				FDEBE6581D80DAC700D39D1C /* Images.xcassets */,
 				FDEBE65A1D80DAC700D39D1C /* LaunchScreen.xib */,
@@ -260,6 +263,7 @@
 				FDEBE6781D874CB400D39D1C /* StopUserViewController.swift in Sources */,
 				FDEBE6801D874ED600D39D1C /* CreatePage0neViewController.swift in Sources */,
 				FDEBE67E1D874E6E00D39D1C /* CreateAdventureViewController.swift in Sources */,
+				FDEF79AB1E3599D300106985 /* NewCollectionViewCell.swift in Sources */,
 				FDEBE6761D874C6B00D39D1C /* AdventureFrontPageUserViewController.swift in Sources */,
 				FDEBE6741D874C3100D39D1C /* SearchScreenViewController.swift in Sources */,
 				FDEBE6721D87439100D39D1C /* HomeScreenViewController.swift in Sources */,

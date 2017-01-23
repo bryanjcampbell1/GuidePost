@@ -532,15 +532,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mdx-wJ-tQN">
-                                <frame key="frameInset" width="375" height="90"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mdx-wJ-tQN">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="IZT-mo-DoO"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
-                                <frame key="frameInset" minX="67" minY="112" width="240" height="128"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="zYq-dv-wjj"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RlM-zC-Ejm">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -548,28 +549,41 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="jTy-SX-8D0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="BXh-Wd-wtl" customClass="NewCollectionViewCell" customModule="GuidePost" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vjg-GY-TMJ" customClass="New">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="Vjg-GY-TMJ" firstAttribute="centerX" secondItem="BXh-Wd-wtl" secondAttribute="centerX" id="NiX-Bz-cf0"/>
+                                            <constraint firstItem="Vjg-GY-TMJ" firstAttribute="centerY" secondItem="BXh-Wd-wtl" secondAttribute="centerY" id="Xqk-HM-LW6"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZfH-Na-6F3" id="sRV-VZ-XWk"/>
+                                    <outlet property="delegate" destination="ZfH-Na-6F3" id="9mG-HS-zRQ"/>
+                                </connections>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="995-QH-uHF">
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="995-QH-uHF">
                                 <frame key="frameInset" minX="83" minY="303" width="243" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-cB-jLl">
-                                        <frame key="frameInset" width="54" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-cB-jLl">
                                         <state key="normal" title="Camera"/>
                                         <connections>
                                             <action selector="cameraButton:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="t1C-9i-lXd"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k5-HT-VK1">
-                                        <frame key="frameInset" minX="154" width="89" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k5-HT-VK1">
                                         <state key="normal" title="Photo Album"/>
                                         <connections>
                                             <action selector="photoGalleryButton:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="pcR-vt-BmI"/>
@@ -577,19 +591,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rzf-Ha-J39">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rzf-Ha-J39">
                                 <frame key="frameInset" minX="83" minY="374" width="240" height="128"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="kxO-Fu-wGR" secondAttribute="trailing" constant="52" id="1OP-Gy-Y6j"/>
                             <constraint firstItem="995-QH-uHF" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="C4a-vK-WrR"/>
                             <constraint firstItem="Rzf-Ha-J39" firstAttribute="top" secondItem="995-QH-uHF" secondAttribute="bottom" constant="41" id="KIU-D9-Gxo"/>
+                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="centerX" secondItem="kxO-Fu-wGR" secondAttribute="centerX" id="KKd-sY-Gwv"/>
+                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="leading" secondItem="bnD-nD-54u" secondAttribute="leading" id="Ou1-Yq-VPa"/>
                             <constraint firstItem="Rzf-Ha-J39" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="Pk8-1O-grV"/>
+                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="top" secondItem="bnD-nD-54u" secondAttribute="top" id="SvO-g1-3KO"/>
                             <constraint firstItem="kxO-Fu-wGR" firstAttribute="top" secondItem="mdx-wJ-tQN" secondAttribute="bottom" constant="22" id="ZjQ-uK-AvB"/>
                             <constraint firstItem="kxO-Fu-wGR" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="grN-QF-UG5"/>
                             <constraint firstItem="995-QH-uHF" firstAttribute="top" secondItem="kxO-Fu-wGR" secondAttribute="bottom" constant="63" id="j4W-f8-ZO2"/>
                             <constraint firstItem="c4W-V0-mDX" firstAttribute="top" secondItem="Rzf-Ha-J39" secondAttribute="bottom" constant="165" id="ttP-cF-Cou"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Rzf-Ha-J39" secondAttribute="trailing" constant="36" id="zmD-Yl-Ycb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -599,7 +618,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xau-lp-QS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2116" y="-184"/>
+            <point key="canvasLocation" x="-2116" y="-184.85757121439281"/>
         </scene>
         <!--Set Price View Controller-->
         <scene sceneID="mPb-Bd-CPv">
@@ -785,10 +804,10 @@
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PRm-H3-CVk">
-                                        <rect key="frame" x="0.0" y="22" width="1000" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="339" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PRm-H3-CVk" id="rLL-ib-HTz">
-                                            <frame key="frameInset" width="1000" height="43"/>
+                                            <frame key="frameInset" width="339" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
