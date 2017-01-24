@@ -13,17 +13,11 @@ class AddImageViewController: UIViewController,
     UIImagePickerControllerDelegate,
     UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate
 {
-    
-    //var cellImages: [UIImage] = []
-    var cellImages: [UIImage] = [
-        UIImage(named: "images.jpg")!,
-        UIImage(named: "images.jpg")!
-    ]
+    var cellImages: [UIImage] = []
     
     let picker = UIImagePickerController()
     
     @IBOutlet weak var collection: UICollectionView!
-    @IBOutlet weak var myImageView: UIImageView!
     
     
     @IBAction func cameraButton(_ sender: AnyObject) {
@@ -81,9 +75,7 @@ class AddImageViewController: UIViewController,
     {
         var  chosenImage = UIImage()
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-       // myImageView.contentMode = .scaleAspectFit //3
-        //myImageView.image = chosenImage //4
-        //var cellImages: [UIImage] = []
+
         cellImages.append(chosenImage)
         
         self.collection.reloadData()
@@ -95,9 +87,7 @@ class AddImageViewController: UIViewController,
     }
     
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-   // var items = ["1", "2"]
-    
-    
+   
     
     // MARK: - UICollectionViewDataSource protocol
     
@@ -111,11 +101,7 @@ class AddImageViewController: UIViewController,
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! NewCollectionViewCell
-        
-        // collectionView.register(MyCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        
-        // Use the outlet in our custom class to get a reference to the UILabel in the cell
-       // cell.myLabel.text = self.items[indexPath.item]
+
         cell.backgroundColor = UIColor.cyan // make cell more visible in our example project
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1

@@ -537,7 +537,8 @@
                                     <constraint firstAttribute="height" constant="90" id="IZT-mo-DoO"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
+                                <frame key="frameInset" minX="34" minY="112" width="307" height="413"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="zYq-dv-wjj"/>
@@ -575,8 +576,7 @@
                                     <outlet property="delegate" destination="ZfH-Na-6F3" id="9mG-HS-zRQ"/>
                                 </connections>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="995-QH-uHF">
-                                <frame key="frameInset" minX="83" minY="303" width="243" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="995-QH-uHF">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-cB-jLl">
                                         <state key="normal" title="Camera"/>
@@ -592,29 +592,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rzf-Ha-J39">
-                                <frame key="frameInset" minX="83" minY="374" width="240" height="128"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="kxO-Fu-wGR" secondAttribute="trailing" constant="52" id="1OP-Gy-Y6j"/>
+                            <constraint firstItem="c4W-V0-mDX" firstAttribute="top" secondItem="995-QH-uHF" secondAttribute="bottom" constant="86" id="1S6-e5-B2D"/>
                             <constraint firstItem="995-QH-uHF" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="C4a-vK-WrR"/>
-                            <constraint firstItem="Rzf-Ha-J39" firstAttribute="top" secondItem="995-QH-uHF" secondAttribute="bottom" constant="41" id="KIU-D9-Gxo"/>
                             <constraint firstItem="mdx-wJ-tQN" firstAttribute="centerX" secondItem="kxO-Fu-wGR" secondAttribute="centerX" id="KKd-sY-Gwv"/>
                             <constraint firstItem="mdx-wJ-tQN" firstAttribute="leading" secondItem="bnD-nD-54u" secondAttribute="leading" id="Ou1-Yq-VPa"/>
-                            <constraint firstItem="Rzf-Ha-J39" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="Pk8-1O-grV"/>
                             <constraint firstItem="mdx-wJ-tQN" firstAttribute="top" secondItem="bnD-nD-54u" secondAttribute="top" id="SvO-g1-3KO"/>
                             <constraint firstItem="kxO-Fu-wGR" firstAttribute="top" secondItem="mdx-wJ-tQN" secondAttribute="bottom" constant="22" id="ZjQ-uK-AvB"/>
                             <constraint firstItem="kxO-Fu-wGR" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="grN-QF-UG5"/>
-                            <constraint firstItem="995-QH-uHF" firstAttribute="top" secondItem="kxO-Fu-wGR" secondAttribute="bottom" constant="63" id="j4W-f8-ZO2"/>
-                            <constraint firstItem="c4W-V0-mDX" firstAttribute="top" secondItem="Rzf-Ha-J39" secondAttribute="bottom" constant="165" id="ttP-cF-Cou"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Rzf-Ha-J39" secondAttribute="trailing" constant="36" id="zmD-Yl-Ycb"/>
+                            <constraint firstItem="995-QH-uHF" firstAttribute="top" secondItem="kxO-Fu-wGR" secondAttribute="bottom" constant="26" id="nI8-U5-C8d"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collection" destination="kxO-Fu-wGR" id="9zp-ot-Ws1"/>
-                        <outlet property="myImageView" destination="Rzf-Ha-J39" id="Eh0-Px-91q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xau-lp-QS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
