@@ -30,8 +30,9 @@ class CreatePageTwoViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     
-    @IBOutlet var imageView: UIImageView!
-    let imagePicker = UIImagePickerController()
+
+    
+    var passedEvent = EventObject()
     
     var pageCounter : Int = 0
     var someEvent = EventObject() //learn how to import this from previous vc
@@ -131,6 +132,12 @@ class CreatePageTwoViewController: UIViewController {
         return message
     }
 
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "AddPic"{
+            let vc = segue.destination as! AddImageViewController
+            vc.newEvent = someEvent
+        }
+    }
     
 }
 

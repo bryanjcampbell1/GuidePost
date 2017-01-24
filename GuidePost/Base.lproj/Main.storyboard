@@ -288,7 +288,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addEvent:" destination="fFM-KF-28n" eventType="touchUpInside" id="lPo-Q1-eZN"/>
-                                    <segue destination="h8c-Lq-JIL" kind="show" id="Bvb-2a-bJh"/>
+                                    <segue destination="h8c-Lq-JIL" kind="show" identifier="NextStop" id="Bvb-2a-bJh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-xR-YpP">
@@ -457,7 +457,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-TZ-MzF">
                                 <state key="normal" title="Add Picture"/>
                                 <connections>
-                                    <segue destination="ZfH-Na-6F3" kind="show" id="wLN-d4-l4B"/>
+                                    <segue destination="ZfH-Na-6F3" kind="show" identifier="AddPic" id="wLN-d4-l4B"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-T7-6rb">
@@ -518,7 +518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeZ-oA-LTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2807.1999999999998" y="-184.85757121439281"/>
+            <point key="canvasLocation" x="-2639" y="-93"/>
         </scene>
         <!--Add Image View Controller-->
         <scene sceneID="i61-LN-97P">
@@ -537,12 +537,30 @@
                                     <constraint firstAttribute="height" constant="90" id="IZT-mo-DoO"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
-                                <frame key="frameInset" minX="34" minY="112" width="307" height="413"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="995-QH-uHF">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-cB-jLl">
+                                        <state key="normal" title="Camera"/>
+                                        <connections>
+                                            <action selector="cameraButton:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="t1C-9i-lXd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k5-HT-VK1">
+                                        <state key="normal" title="Photo Album"/>
+                                        <connections>
+                                            <action selector="photoGalleryButton:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="pcR-vt-BmI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v72-10-sHm">
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="h8c-Lq-JIL" kind="show" identifier="backToStop" id="Yhn-e6-P4r"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="zYq-dv-wjj"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RlM-zC-Ejm">
                                     <size key="itemSize" width="66" height="56"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -576,34 +594,21 @@
                                     <outlet property="delegate" destination="ZfH-Na-6F3" id="9mG-HS-zRQ"/>
                                 </connections>
                             </collectionView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="995-QH-uHF">
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uu8-cB-jLl">
-                                        <state key="normal" title="Camera"/>
-                                        <connections>
-                                            <action selector="cameraButton:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="t1C-9i-lXd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7k5-HT-VK1">
-                                        <state key="normal" title="Photo Album"/>
-                                        <connections>
-                                            <action selector="photoGalleryButton:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="pcR-vt-BmI"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="kxO-Fu-wGR" secondAttribute="trailing" constant="52" id="1OP-Gy-Y6j"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kxO-Fu-wGR" secondAttribute="trailing" constant="18" id="1OP-Gy-Y6j"/>
                             <constraint firstItem="c4W-V0-mDX" firstAttribute="top" secondItem="995-QH-uHF" secondAttribute="bottom" constant="86" id="1S6-e5-B2D"/>
+                            <constraint firstItem="kxO-Fu-wGR" firstAttribute="top" secondItem="v72-10-sHm" secondAttribute="bottom" constant="8" id="4pr-DV-RFm"/>
                             <constraint firstItem="995-QH-uHF" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="C4a-vK-WrR"/>
-                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="centerX" secondItem="kxO-Fu-wGR" secondAttribute="centerX" id="KKd-sY-Gwv"/>
+                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="top" secondItem="bnD-nD-54u" secondAttribute="top" id="JZ9-4L-QMz"/>
+                            <constraint firstAttribute="trailing" secondItem="mdx-wJ-tQN" secondAttribute="trailing" id="LCi-Vn-Zpi"/>
                             <constraint firstItem="mdx-wJ-tQN" firstAttribute="leading" secondItem="bnD-nD-54u" secondAttribute="leading" id="Ou1-Yq-VPa"/>
-                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="top" secondItem="bnD-nD-54u" secondAttribute="top" id="SvO-g1-3KO"/>
-                            <constraint firstItem="kxO-Fu-wGR" firstAttribute="top" secondItem="mdx-wJ-tQN" secondAttribute="bottom" constant="22" id="ZjQ-uK-AvB"/>
+                            <constraint firstItem="mdx-wJ-tQN" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="WHX-r3-3tg"/>
+                            <constraint firstItem="v72-10-sHm" firstAttribute="top" secondItem="mdx-wJ-tQN" secondAttribute="bottom" constant="14" id="bgX-NX-4Id"/>
                             <constraint firstItem="kxO-Fu-wGR" firstAttribute="centerX" secondItem="bnD-nD-54u" secondAttribute="centerX" id="grN-QF-UG5"/>
-                            <constraint firstItem="995-QH-uHF" firstAttribute="top" secondItem="kxO-Fu-wGR" secondAttribute="bottom" constant="26" id="nI8-U5-C8d"/>
+                            <constraint firstItem="995-QH-uHF" firstAttribute="top" secondItem="kxO-Fu-wGR" secondAttribute="bottom" constant="11" id="mGt-86-xmX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="v72-10-sHm" secondAttribute="trailing" constant="6" id="tWD-q8-SCX"/>
                         </constraints>
                     </view>
                     <connections>
@@ -612,7 +617,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xau-lp-QS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2116" y="-184.85757121439281"/>
+            <point key="canvasLocation" x="-1566" y="-184"/>
         </scene>
         <!--Set Price View Controller-->
         <scene sceneID="mPb-Bd-CPv">
@@ -1397,8 +1402,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hG2-Tx-JpS"/>
         <segue reference="2pk-dN-f0k"/>
+        <segue reference="Yhn-e6-P4r"/>
+        <segue reference="hG2-Tx-JpS"/>
         <segue reference="52Q-CS-9vx"/>
     </inferredMetricsTieBreakers>
 </document>

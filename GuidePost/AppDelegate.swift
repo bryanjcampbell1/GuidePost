@@ -56,8 +56,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //3) Create arrays to store entered pics and descriptions
 //4) Bundle these entered values into eventObjects
 //5) Deal appropriately with "pagecounter" in CPTVC
-//6) Use Collectionview in AddPictureView Controller
-//7) Give option to return to AddStopVC from AddPicVC
+//6) Use Collectionview in AddPictureView Controller --> Done
+//7) Give option to return to AddStopVC from AddPicVC --> Done
+//8) Make Sure Same eventObject is passed back and forth between vcs when creating
 
 
 //Are your nights out the best in the city?  Do you find yourself in weird or exotic situations?  Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn cash for their events!

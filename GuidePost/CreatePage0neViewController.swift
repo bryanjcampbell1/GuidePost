@@ -31,9 +31,9 @@ class CreatePageOneViewController: UIViewController {
 
     var newEvent = EventObject()
     
-    override func viewDidLoad() {
+override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -79,4 +79,15 @@ class CreatePageOneViewController: UIViewController {
         newEvent.saveEventObject()
         
     }
+    
+
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "NextStop"{
+            let vc = segue.destination as! CreatePageTwoViewController
+            vc.someEvent = newEvent
+        }
+    }
+
+    
+    
 }

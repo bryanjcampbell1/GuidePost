@@ -17,6 +17,8 @@ class AddImageViewController: UIViewController,
     
     let picker = UIImagePickerController()
     
+    var newEvent = EventObject()
+    
     @IBOutlet weak var collection: UICollectionView!
     
     
@@ -128,6 +130,13 @@ class AddImageViewController: UIViewController,
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
         cell?.backgroundColor = UIColor.cyan
+    }
+    
+    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "backToStop"{
+            let vc = segue.destination as! CreatePageTwoViewController
+            vc.someEvent = newEvent
+        }
     }
 
 }
