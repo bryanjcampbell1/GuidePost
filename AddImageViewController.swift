@@ -14,6 +14,12 @@ class AddImageViewController: UIViewController,
     UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate
 {
     
+    //var cellImages: [UIImage] = []
+    var cellImages: [UIImage] = [
+        UIImage(named: "images.jpg")!,
+        UIImage(named: "images.jpg")!
+    ]
+    
     let picker = UIImagePickerController()
     
     @IBOutlet weak var collection: UICollectionView!
@@ -75,8 +81,13 @@ class AddImageViewController: UIViewController,
     {
         var  chosenImage = UIImage()
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        myImageView.contentMode = .scaleAspectFit //3
-        myImageView.image = chosenImage //4
+       // myImageView.contentMode = .scaleAspectFit //3
+        //myImageView.image = chosenImage //4
+        //var cellImages: [UIImage] = []
+        cellImages.append(chosenImage)
+        
+        self.collection.reloadData()
+        
         dismiss(animated:true, completion: nil) //5
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -84,19 +95,15 @@ class AddImageViewController: UIViewController,
     }
     
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
-    var items = ["1", "2"]
+   // var items = ["1", "2"]
     
-    //var cellImages: [UIImage] = []
-    var cellImages: [UIImage] = [
-        UIImage(named: "images.jpg")!,
-        UIImage(named: "images.jpg")!
-    ]
+    
     
     // MARK: - UICollectionViewDataSource protocol
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.items.count
+        return self.cellImages.count
     }
     
     // make a cell for each cell index path
