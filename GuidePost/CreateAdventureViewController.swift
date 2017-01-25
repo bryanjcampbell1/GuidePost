@@ -20,8 +20,6 @@ class CreateAdventureViewController: UIViewController, UITableViewDelegate, UITa
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     
-    var listOfNames = ["Andrei", "Silviu", "Claudiu"] // an array of strings
-    
     
     // Data model: These strings will be the data for the table view cells
     let animals: [String] = ["Horse", "Cow", "Camel", "Sheep", "Goat"]

@@ -452,6 +452,7 @@
                                 </state>
                                 <connections>
                                     <action selector="addEvent:" destination="h8c-Lq-JIL" eventType="touchUpInside" id="Ozq-lt-7WA"/>
+                                    <segue destination="h8c-Lq-JIL" kind="show" identifier="ReloadNewStop" id="qmL-ya-jj9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-TZ-MzF">
@@ -519,7 +520,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeZ-oA-LTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3022" y="-159"/>
+            <point key="canvasLocation" x="-3447" y="716"/>
         </scene>
         <!--Add Image View Controller-->
         <scene sceneID="i61-LN-97P">

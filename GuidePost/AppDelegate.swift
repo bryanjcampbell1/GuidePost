@@ -51,17 +51,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall
 
 //UI
-//1) Remove placeholder text in description fields  --> Done
-//2) Have "Add Picture" button actually bring up a cameraview --> Done
-//3) Create arrays to store entered pics and descriptions
-//4) Bundle these entered values into eventObjects
-//5) Deal appropriately with "pagecounter" in CPTVC
-//6) Use Collectionview in AddPictureView Controller --> Done
-//7) Give option to return to AddStopVC from AddPicVC --> Done
-//8) Make Sure Same eventObject is passed back and forth between vcs when creating
+//1)
+//2)
+//3)
+//4)
+//5)
+//6)
+//7)
+//8)
 
-
-//Are your nights out the best in the city?  Do you find yourself in weird or exotic situations?  Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn cash for their events!
+//Are your nights out the best in the city?  Do you find yourself in weird or exotic situations?  Have you ever been to an amature Thai fight?Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn cash for their events!
 
 
 

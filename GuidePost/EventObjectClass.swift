@@ -63,6 +63,8 @@ class EventObject {
     
     var cellImages: [UIImage] = []
     
+    var NumberOfStops = 1
+    
     var Price: Int?
     var Publish = 0
     

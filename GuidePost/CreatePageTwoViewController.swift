@@ -6,6 +6,15 @@
 //  Copyright (c) 2016 Bryan Campbell. All rights reserved.
 //
 
+//--------------------------------------------------------//
+// add condition for maximum allowed stops met
+// -->  1) show alertview ---> "Maximum number of event stops is 10.  Please piblish your adventure!"
+//      2) add if pagecounter >=11 ---> button press should not trigger segway but instead alertview as above
+//      3)
+//--------------------------------------------------------//
+
+
+
 import Foundation
 import UIKit
 
@@ -36,19 +45,16 @@ class CreatePageTwoViewController: UIViewController {
         performSegue(withIdentifier: "AddPic", sender: nil)
         
     }
-
     
-    var passedEvent = EventObject()
-    
-    var pageCounter : Int = 0
     var someEvent = EventObject() //learn how to import this from previous vc
-    
+    var pageCounter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        pageCounter = 1
         
+        someEvent.NumberOfStops = someEvent.NumberOfStops + 1
+        pageCounter = someEvent.NumberOfStops
     }
     
     override func didReceiveMemoryWarning() {
@@ -64,7 +70,20 @@ class CreatePageTwoViewController: UIViewController {
         print(update())
     }
     @IBAction func addEvent(_ sender: AnyObject) {
-        print(update())
+        
+        if pageCounter >= 5 {
+        
+        let alert = UIAlertController(title: "Warning", message: "Max nuber of stops is 10", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        }
+        else{
+            //ReloadNewStop
+            performSegue(withIdentifier: "ReloadNewStop", sender: nil)
+        }
+        
+        
+        
     }
     
     func update() -> String {
@@ -143,12 +162,10 @@ class CreatePageTwoViewController: UIViewController {
             let vc = segue.destination as! AddImageViewController
             vc.newEvent = someEvent
             
-            print( "add pic segue clicked")
-            
-            print(self.someEvent.cellImages.count)
-            print(someEvent.cellImages.count)
-         
-            
+        }
+        else if segue.identifier == "ReloadNewStop"{
+            let vc = segue.destination as! CreatePageTwoViewController
+            vc.someEvent = someEvent
         }
     }
     
