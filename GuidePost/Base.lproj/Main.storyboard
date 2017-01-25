@@ -457,7 +457,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBr-TZ-MzF">
                                 <state key="normal" title="Add Picture"/>
                                 <connections>
-                                    <segue destination="ZfH-Na-6F3" kind="show" identifier="AddPic" id="wLN-d4-l4B"/>
+                                    <action selector="addPictureButtonPressed:" destination="h8c-Lq-JIL" eventType="touchUpInside" id="E0Y-9g-RkX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sUF-T7-6rb">
@@ -514,11 +514,12 @@
                         <outlet property="searchButton" destination="hVh-1P-jVC" id="dXa-YK-cwi"/>
                         <outlet property="stopDescription" destination="baP-18-dRI" id="2jR-XB-qwp"/>
                         <outlet property="stopNameTextField" destination="71e-TP-hx9" id="nPl-9J-irz"/>
+                        <segue destination="ZfH-Na-6F3" kind="show" identifier="AddPic" id="oBM-sH-HG0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeZ-oA-LTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2639" y="-93"/>
+            <point key="canvasLocation" x="-3022" y="-159"/>
         </scene>
         <!--Add Image View Controller-->
         <scene sceneID="i61-LN-97P">
@@ -556,7 +557,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v72-10-sHm">
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="h8c-Lq-JIL" kind="show" identifier="backToStop" id="Yhn-e6-P4r"/>
+                                    <action selector="backButtonPressed:" destination="ZfH-Na-6F3" eventType="touchUpInside" id="rcC-M6-0X1"/>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kxO-Fu-wGR">
@@ -613,11 +614,12 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="kxO-Fu-wGR" id="9zp-ot-Ws1"/>
+                        <segue destination="h8c-Lq-JIL" kind="show" identifier="backToStop" id="e2e-vQ-8SJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xau-lp-QS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1566" y="-184"/>
+            <point key="canvasLocation" x="-2017" y="-93"/>
         </scene>
         <!--Set Price View Controller-->
         <scene sceneID="mPb-Bd-CPv">
@@ -1403,8 +1405,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2pk-dN-f0k"/>
-        <segue reference="Yhn-e6-P4r"/>
-        <segue reference="hG2-Tx-JpS"/>
+        <segue reference="e2e-vQ-8SJ"/>
         <segue reference="52Q-CS-9vx"/>
+        <segue reference="hG2-Tx-JpS"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -61,6 +61,8 @@ class EventObject {
     var NinethPic: UIImage?
     var TenthPic: UIImage?
     
+    var cellImages: [UIImage] = []
+    
     var Price: Int?
     var Publish = 0
     

@@ -13,7 +13,7 @@ class AddImageViewController: UIViewController,
     UIImagePickerControllerDelegate,
     UINavigationControllerDelegate, UICollectionViewDataSource, UICollectionViewDelegate
 {
-    var cellImages: [UIImage] = []
+    //var cellImages: [UIImage] = []
     
     let picker = UIImagePickerController()
     
@@ -21,6 +21,12 @@ class AddImageViewController: UIViewController,
     
     @IBOutlet weak var collection: UICollectionView!
     
+    @IBAction func backButtonPressed(_ sender: AnyObject) {
+        
+        //backToStop
+        performSegue(withIdentifier: "backToStop", sender: nil)
+        
+    }
     
     @IBAction func cameraButton(_ sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -69,6 +75,11 @@ class AddImageViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
+        
+        print("in add imageVC")
+        
+        print(self.newEvent.cellImages.count)
+        print(newEvent.cellImages.count)
     }
     
     //MARK: - Delegates
@@ -78,7 +89,7 @@ class AddImageViewController: UIViewController,
         var  chosenImage = UIImage()
         chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
 
-        cellImages.append(chosenImage)
+        newEvent.cellImages.append(chosenImage)
         
         self.collection.reloadData()
         
@@ -95,7 +106,8 @@ class AddImageViewController: UIViewController,
     
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.cellImages.count
+        
+        return self.newEvent.cellImages.count
     }
     
     // make a cell for each cell index path
@@ -108,7 +120,7 @@ class AddImageViewController: UIViewController,
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
-        cell.cellImage.image = self.cellImages[indexPath.item]
+        cell.cellImage.image = self.newEvent.cellImages[indexPath.item]
         
         return cell
     }
@@ -132,10 +144,18 @@ class AddImageViewController: UIViewController,
         cell?.backgroundColor = UIColor.cyan
     }
     
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+     //func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "backToStop"{
+            print("que?")
             let vc = segue.destination as! CreatePageTwoViewController
             vc.someEvent = newEvent
+            
+            print("in back to stop")
+            
         }
     }
 

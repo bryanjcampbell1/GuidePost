@@ -10,7 +10,6 @@
 		FD4C89A71E2987AD00207AF2 /* EventObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C89A61E2987AD00207AF2 /* EventObjectClass.swift */; };
 		FD4C89A91E2AA62800207AF2 /* SearchObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */; };
 		FD4C89AB1E2C054300207AF2 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD4C89AA1E2C054300207AF2 /* images.jpg */; };
-		FD5E57591E2C22B500F53A93 /* fakeEventsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD5E57581E2C22B500F53A93 /* fakeEventsArray.swift */; };
 		FDEBE6521D80DAC600D39D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEBE6511D80DAC600D39D1C /* AppDelegate.swift */; };
 		FDEBE6571D80DAC600D39D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDEBE6551D80DAC600D39D1C /* Main.storyboard */; };
 		FDEBE6591D80DAC700D39D1C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDEBE6581D80DAC700D39D1C /* Images.xcassets */; };
@@ -44,7 +43,6 @@
 		FD4C89A61E2987AD00207AF2 /* EventObjectClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventObjectClass.swift; sourceTree = "<group>"; };
 		FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchObjectClass.swift; path = ../SearchObjectClass.swift; sourceTree = "<group>"; };
 		FD4C89AA1E2C054300207AF2 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
-		FD5E57581E2C22B500F53A93 /* fakeEventsArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = fakeEventsArray.swift; sourceTree = "<group>"; };
 		FDEBE64C1D80DAC600D39D1C /* GuidePost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuidePost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDEBE6501D80DAC600D39D1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDEBE6511D80DAC600D39D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */,
 				FDEBE6711D87439100D39D1C /* HomeScreenViewController.swift */,
 				FDEBE6731D874C3100D39D1C /* SearchScreenViewController.swift */,
-				FD5E57581E2C22B500F53A93 /* fakeEventsArray.swift */,
 				FDEBE67D1D874E6E00D39D1C /* CreateAdventureViewController.swift */,
 				FDEBE67F1D874ED600D39D1C /* CreatePage0neViewController.swift */,
 				FDEBE6811D874F0C00D39D1C /* CreatePageTwoViewController.swift */,
@@ -271,7 +268,6 @@
 				FDEBE67A1D874D1400D39D1C /* MapPageViewController.swift in Sources */,
 				FD4C89A71E2987AD00207AF2 /* EventObjectClass.swift in Sources */,
 				FDEBE6521D80DAC600D39D1C /* AppDelegate.swift in Sources */,
-				FD5E57591E2C22B500F53A93 /* fakeEventsArray.swift in Sources */,
 				FD4C89A91E2AA62800207AF2 /* SearchObjectClass.swift in Sources */,
 				FDEBE6841D874F5800D39D1C /* SetPriceViewController.swift in Sources */,
 				FDEBE6821D874F0C00D39D1C /* CreatePageTwoViewController.swift in Sources */,

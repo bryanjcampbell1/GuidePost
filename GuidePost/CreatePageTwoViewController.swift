@@ -30,6 +30,12 @@ class CreatePageTwoViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     
+    @IBAction func addPictureButtonPressed(_ sender: AnyObject) {
+        
+        
+        performSegue(withIdentifier: "AddPic", sender: nil)
+        
+    }
 
     
     var passedEvent = EventObject()
@@ -66,61 +72,61 @@ class CreatePageTwoViewController: UIViewController {
             
             someEvent.FirstName = stopNameTextField.text
             someEvent.FirstAddress = addressTextField.text
-            someEvent.FirstPic = stopImage.image
+            //someEvent.FirstPic = stopImage.image
             someEvent.FirstDescription = stopDescription.text
             
         } else if pageCounter == 2 {
             someEvent.SecondName = stopNameTextField.text
             someEvent.SecondAddress = addressTextField.text
-            someEvent.SecondPic = stopImage.image
+           // someEvent.SecondPic = stopImage.image
             someEvent.SecondDescription = stopDescription.text
             
         } else if pageCounter == 3 {
             someEvent.ThirdName = stopNameTextField.text
             someEvent.ThirdAddress = addressTextField.text
-            someEvent.ThirdPic = stopImage.image
+           // someEvent.ThirdPic = stopImage.image
             someEvent.ThirdDescription = stopDescription.text
             
         }else if pageCounter == 4 {
             someEvent.FourthName = stopNameTextField.text
             someEvent.FourthAddress = addressTextField.text
-            someEvent.FourthPic = stopImage.image
+           // someEvent.FourthPic = stopImage.image
             someEvent.FourthDescription = stopDescription.text
             
         }else if pageCounter == 5 {
             someEvent.FifthName = stopNameTextField.text
             someEvent.FifthAddress = addressTextField.text
-            someEvent.FifthPic = stopImage.image
+            //someEvent.FifthPic = stopImage.image
             someEvent.FifthDescription = stopDescription.text
             
         }else if pageCounter == 6 {
             someEvent.SixthName = stopNameTextField.text
             someEvent.SixthAddress = addressTextField.text
-            someEvent.SixthPic = stopImage.image
+          //  someEvent.SixthPic = stopImage.image
             someEvent.SixthDescription = stopDescription.text
             
         }else if pageCounter == 7 {
             someEvent.SeventhName = stopNameTextField.text
             someEvent.SeventhAddress = addressTextField.text
-            someEvent.SeventhPic = stopImage.image
+           // someEvent.SeventhPic = stopImage.image
             someEvent.SeventhDescription = stopDescription.text
             
         }else if pageCounter == 8 {
             someEvent.EighthName = stopNameTextField.text
             someEvent.EighthAddress = addressTextField.text
-            someEvent.EighthPic = stopImage.image
+       //     someEvent.EighthPic = stopImage.image
             someEvent.EighthDescription = stopDescription.text
             
         }else if pageCounter == 9 {
             someEvent.NinethName = stopNameTextField.text
             someEvent.NinethAddress = addressTextField.text
-            someEvent.NinethPic = stopImage.image
+         //   someEvent.NinethPic = stopImage.image
             someEvent.NinethDescription = stopDescription.text
             
         }else if pageCounter == 10 {
             someEvent.TenthName = stopNameTextField.text
             someEvent.TenthAddress = addressTextField.text
-            someEvent.TenthPic = stopImage.image
+       //     someEvent.TenthPic = stopImage.image
             someEvent.TenthDescription = stopDescription.text
         }
         else {
@@ -132,10 +138,17 @@ class CreatePageTwoViewController: UIViewController {
         return message
     }
 
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddPic"{
             let vc = segue.destination as! AddImageViewController
             vc.newEvent = someEvent
+            
+            print( "add pic segue clicked")
+            
+            print(self.someEvent.cellImages.count)
+            print(someEvent.cellImages.count)
+         
+            
         }
     }
     

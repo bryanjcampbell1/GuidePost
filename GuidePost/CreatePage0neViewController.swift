@@ -81,7 +81,7 @@ override func viewDidLoad() {
     }
     
 
-    func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "NextStop"{
             let vc = segue.destination as! CreatePageTwoViewController
             vc.someEvent = newEvent
