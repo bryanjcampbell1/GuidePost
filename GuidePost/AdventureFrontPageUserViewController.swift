@@ -26,6 +26,12 @@ class AdventureFrontPageUserViewController: UIViewController {
     
     @IBOutlet weak var startAdventureButton: UIButton!
     
+    @IBAction func viewGalleryPressed(_ sender: AnyObject) {
+    
+        //ViewGallery
+        performSegue(withIdentifier: "ViewGallery", sender: nil)
+        
+    }
     var passedEvent = EventObject()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,6 +51,23 @@ class AdventureFrontPageUserViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //--------------------------segue methods-------------------------------//
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        //func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ViewGallery"{
+            let vc = segue.destination as! AdventureGalleryViewController
+            vc.newEvent = passedEvent
+            
+            print("segue to gallery")
+            print(vc.newEvent.cellImages.count)
+        }
+    }
+    
+    
+    
     
     
 }

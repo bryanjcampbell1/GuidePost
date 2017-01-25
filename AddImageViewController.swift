@@ -75,11 +75,6 @@ class AddImageViewController: UIViewController,
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.delegate = self
-        
-        print("in add imageVC")
-        
-        print(self.newEvent.cellImages.count)
-        print(newEvent.cellImages.count)
     }
     
     //MARK: - Delegates
@@ -107,7 +102,13 @@ class AddImageViewController: UIViewController,
     // tell the collection view how many cells to make
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return self.newEvent.cellImages.count
+        if self.newEvent.cellImages.count >= 9{
+           return self.newEvent.cellImages.count
+        }
+        else{
+            return 9
+        }
+        
     }
     
     // make a cell for each cell index path
@@ -120,7 +121,14 @@ class AddImageViewController: UIViewController,
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
+        
+        
+        if indexPath.item < self.newEvent.cellImages.count {
         cell.cellImage.image = self.newEvent.cellImages[indexPath.item]
+        }
+        
+        
+       // cell.cellImage.image = self.newEvent.cellImages[indexPath.item]
         
         return cell
     }
@@ -150,12 +158,8 @@ class AddImageViewController: UIViewController,
     
      //func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "backToStop"{
-            print("que?")
             let vc = segue.destination as! CreatePageTwoViewController
             vc.someEvent = newEvent
-            
-            print("in back to stop")
-            
         }
     }
 

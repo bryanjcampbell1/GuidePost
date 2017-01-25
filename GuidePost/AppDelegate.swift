@@ -51,16 +51,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall
 
 //UI
-//1) make more realist "Your Adventures" list
-//2) fix save and publish buttons --> put in a stack view?
-//3)
-//4)
-//5)
-//6)
-//7)
-//8)
+//1) make collectionview prety --> make 9 panels with default pict
+//2) make collectionview cells expand to detailview when tapped
+//3) design profile page
+//4) make filter buttons on searchVC equal width
+//5) make "insert text here" in Description just a placeholder
+//6) center "Your Adventures Label" and text in tableview
+//7) make tableview in createAdeventureVC wired to an array that can 
+//   hold contents from search query
+//8) Add viewGalleryButton above price in Adventure front page
+//9) Add star rating --> How does this fit in with eventObject? -->Should be a property
 
-//Are your nights out the best in the city?  Do you find yourself in weird or exotic situations?  Have you ever been to an amature Thai fight?Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn cash for their events!
+//Are your nights out the best in the city?  Do you find yourself in weird or exotic situations?Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn cash for their events!
 
 
 

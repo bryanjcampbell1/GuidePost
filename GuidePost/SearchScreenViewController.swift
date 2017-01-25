@@ -138,7 +138,10 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent.FirstName = "Moonvilla"
         //someEvent.FirstPic = stopImage.image
         newEvent.FirstDescription = "Dont stop!!"
-        
+        newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         
         //create an event to diplay
         newEvent2.EventName = "Thai food tour"
@@ -149,6 +152,10 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent2.FirstName = "SandI"
         //someEvent.FirstPic = stopImage.image
         newEvent2.FirstDescription = "Keep Eating.  Thai Spicy!"
+        newEvent2.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent2.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent2.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        
         
         //create an event to diplay
         newEvent3.EventName = "Pants off Dance off"
@@ -159,6 +166,12 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent3.FirstName = "WhiteHouse"
         //someEvent.FirstPic = stopImage.image
         newEvent3.FirstDescription = "Better than Gay gardens!"
+        newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         
         //----------------------------------------------------------------------------------------------//
         
@@ -202,5 +215,8 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
             nextScene.passedEvent = selectedVehicle as! EventObject
         }
     }
+    
+    
+    
     
 }
