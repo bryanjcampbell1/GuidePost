@@ -51,8 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall
 
 //UI
-//1)
-//2)
+//1) make more realist "Your Adventures" list
+//2) fix save and publish buttons --> put in a stack view?
 //3)
 //4)
 //5)
