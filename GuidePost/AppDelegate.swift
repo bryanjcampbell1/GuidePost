@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //1) make collectionview prety --> make 9 panels with default pict
 //2) make collectionview cells expand to detailview when tapped
 //3) design profile page
-//4) make filter buttons on searchVC equal width
+//4) 
 //5) make "insert text here" in Description just a placeholder
 //6) center "Your Adventures Label" and text in tableview
 //7) make tableview in createAdeventureVC wired to an array that can 
