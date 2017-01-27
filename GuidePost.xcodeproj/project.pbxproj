@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FD45CC0F1E3C055900CEDBC6 /* EventAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45CC0E1E3C055900CEDBC6 /* EventAnnotation.swift */; };
+		FD45CC111E3C0AD700CEDBC6 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45CC101E3C0AD700CEDBC6 /* DetailImageViewController.swift */; };
 		FD4C89A71E2987AD00207AF2 /* EventObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C89A61E2987AD00207AF2 /* EventObjectClass.swift */; };
 		FD4C89A91E2AA62800207AF2 /* SearchObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */; };
 		FD4C89AB1E2C054300207AF2 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD4C89AA1E2C054300207AF2 /* images.jpg */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FD45CC0E1E3C055900CEDBC6 /* EventAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventAnnotation.swift; sourceTree = "<group>"; };
+		FD45CC101E3C0AD700CEDBC6 /* DetailImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailImageViewController.swift; sourceTree = "<group>"; };
 		FD4C89A61E2987AD00207AF2 /* EventObjectClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventObjectClass.swift; sourceTree = "<group>"; };
 		FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchObjectClass.swift; path = ../SearchObjectClass.swift; sourceTree = "<group>"; };
 		FD4C89AA1E2C054300207AF2 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 				FDEBE6771D874CB400D39D1C /* StopUserViewController.swift */,
 				FDEBE67B1D874D5300D39D1C /* RateAdventureViewController.swift */,
 				FDEBE6551D80DAC600D39D1C /* Main.storyboard */,
+				FD45CC101E3C0AD700CEDBC6 /* DetailImageViewController.swift */,
+				FD45CC0E1E3C055900CEDBC6 /* EventAnnotation.swift */,
 				FDEF79AA1E3599D300106985 /* NewCollectionViewCell.swift */,
 				FDEF79AE1E396D6900106985 /* AnotherCollectionViewCell.swift */,
 				FD4C89AA1E2C054300207AF2 /* images.jpg */,
@@ -270,10 +276,12 @@
 				FDEF79AB1E3599D300106985 /* NewCollectionViewCell.swift in Sources */,
 				FDEBE6761D874C6B00D39D1C /* AdventureFrontPageUserViewController.swift in Sources */,
 				FDEBE6741D874C3100D39D1C /* SearchScreenViewController.swift in Sources */,
+				FD45CC111E3C0AD700CEDBC6 /* DetailImageViewController.swift in Sources */,
 				FDEBE6721D87439100D39D1C /* HomeScreenViewController.swift in Sources */,
 				FDEF79311E35578D00106985 /* AddImageViewController.swift in Sources */,
 				FDEBE67A1D874D1400D39D1C /* MapPageViewController.swift in Sources */,
 				FD4C89A71E2987AD00207AF2 /* EventObjectClass.swift in Sources */,
+				FD45CC0F1E3C055900CEDBC6 /* EventAnnotation.swift in Sources */,
 				FDEBE6521D80DAC600D39D1C /* AppDelegate.swift in Sources */,
 				FD4C89A91E2AA62800207AF2 /* SearchObjectClass.swift in Sources */,
 				FDEF79AD1E395B8D00106985 /* AdventureGalleryViewController.swift in Sources */,

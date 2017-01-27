@@ -83,6 +83,13 @@ class AdventureGalleryViewController: UIViewController, UICollectionViewDataSour
             let vc = segue.destination as! AdventureFrontPageUserViewController
             vc.passedEvent = newEvent
         }
+        else if segue.identifier == "GalleryToDetail"{
+            let vc = segue.destination as! DetailImageViewController
+            vc.passedEvent = newEvent
+            
+            //Also pass the ifo of which cell was tapped
+            
+        }
     }
     
     //-------------------------------------- standard functions --------------------------------//

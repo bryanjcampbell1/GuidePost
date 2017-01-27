@@ -51,8 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall
 
 //UI
-//1) Popup an alert view if AdventureID is not an element of purchasedEventsArray --> else procede to next vc
-//2) Make mapviewVC work with a preset location --> add address and location as properties for event object
+//1)
+//2) 
 //3) Create new stops to go along with the fakeEvents for testing pages
 //4)
 //5)
