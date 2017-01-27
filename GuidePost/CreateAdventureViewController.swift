@@ -22,13 +22,23 @@ class CreateAdventureViewController: UIViewController, UITableViewDelegate, UITa
     
     
     // Data model: These strings will be the data for the table view cells
-    let animals: [String] = ["Pig Roast", "Night of Thai Fights"]
+    var animals: [String] = []
     
     // cell reuse id (cells that scroll out of view can be reused)
     let cellReuseIdentifier = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //--------------Add Query ----------------------------------//
+        
+       // update data table with data from query
+        
+        animals.append("Pig Roast")
+        animals.append("Night of Thai Fights")
+        
+        
+        //---------------------------------------------------------//
         
         // Register the table view cell class and its reuse id
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)

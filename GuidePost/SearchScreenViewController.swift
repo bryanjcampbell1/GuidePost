@@ -136,6 +136,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent.MainDescription = "Late night speakeasy with greasy comfort food,  Excellent post night-out meal.  Make sure to order the cold tea."
         //newEvent.MainPicture = #imageLiteral(resourceName: "images.jpg")
         newEvent.FirstName = "Moonvilla"
+        newEvent.EventID = "ld02pfn23"
         //someEvent.FirstPic = stopImage.image
         newEvent.FirstDescription = "Dont stop!!"
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
@@ -144,6 +145,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         
         //create an event to diplay
+        newEvent2.EventID = "ld0juygn23"
         newEvent2.EventName = "Thai food tour"
         newEvent2.Tags = "Lunch, Dinner, Food Tour"
         newEvent2.FirstAddress = "2 Allston St."

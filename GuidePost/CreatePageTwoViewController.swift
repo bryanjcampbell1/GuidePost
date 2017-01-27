@@ -6,12 +6,6 @@
 //  Copyright (c) 2016 Bryan Campbell. All rights reserved.
 //
 
-//--------------------------------------------------------//
-// add condition for maximum allowed stops met
-// -->  1) show alertview ---> "Maximum number of event stops is 10.  Please piblish your adventure!"
-//      2) add if pagecounter >=11 ---> button press should not trigger segway but instead alertview as above
-//      3)
-//--------------------------------------------------------//
 
 
 

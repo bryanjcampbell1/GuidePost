@@ -12,6 +12,7 @@ import UIKit
 class EventObject {
     var EventName: String?
     var UserID: String?
+    var EventID: String?
     
     var Tags: String?
     var MainDescription: String?

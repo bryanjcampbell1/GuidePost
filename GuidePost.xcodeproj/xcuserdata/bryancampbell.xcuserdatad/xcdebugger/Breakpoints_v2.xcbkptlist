@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GuidePost/SearchScreenViewController.swift"
-            timestampString = "507076776.776134"
+            timestampString = "507248830.051499"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
             landmarkName = "searchFunction(w:x:y:z:)"
             landmarkType = "7">
          </BreakpointContent>

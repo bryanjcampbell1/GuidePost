@@ -51,16 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall
 
 //UI
-//1) make collectionview prety --> make 9 panels with default pict
-//2) make collectionview cells expand to detailview when tapped
-//3) design profile page
-//4) 
-//5) make "insert text here" in Description just a placeholder
-//6) center "Your Adventures Label" and text in tableview
-//7) make tableview in createAdeventureVC wired to an array that can 
-//   hold contents from search query
-//8) Add viewGalleryButton above price in Adventure front page
+//1) Popup an alert view if AdventureID is not an element of purchasedEventsArray --> else procede to next vc
+//2) Make mapviewVC work with a preset location --> add address and location as properties for event object
+//3) Create new stops to go along with the fakeEvents for testing pages
+//4)
+//5)
+//6) make collectionview cells expand to detailview when tapped
+//7)
+//8)
 //9) Add star rating --> How does this fit in with eventObject? -->Should be a property
+//10) Design profile page
+
 
 //Are your nights out the best in the city?  Do you find yourself in weird or exotic situations?Do you want to share these amazing experiences with the world?  Post your night itineary on GuidePost and become a tastemaker.  Well recieved guides can even earn cash for their events!
 

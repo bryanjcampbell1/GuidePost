@@ -954,6 +954,9 @@
                                 <state key="normal" title="Start Adventure">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="startAdventureTapped:" destination="Ps4-B8-Lkc" eventType="touchUpInside" id="yQR-5S-4TZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPb-Ij-5xg">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1077,11 +1080,12 @@
                         <outlet property="starsImage" destination="9yE-E3-xjA" id="SeI-sV-xIQ"/>
                         <outlet property="startAdventureButton" destination="poZ-Pv-csA" id="vtA-9F-8ap"/>
                         <segue destination="QK8-0H-v4G" kind="show" identifier="ViewGallery" id="tM6-V7-IvK"/>
+                        <segue destination="Xfy-8l-GxA" kind="show" identifier="StartToStop" id="HP4-Cd-dxp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8aY-eR-pPK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3302" y="-408"/>
+            <point key="canvasLocation" x="-3841" y="-2099"/>
         </scene>
         <!--Adventure Gallery View Controller-->
         <scene sceneID="Yfx-rJ-dJR">
@@ -1275,7 +1279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCo-6Y-AFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3207" y="-1265"/>
+            <point key="canvasLocation" x="-3041" y="-1966"/>
         </scene>
         <!--Map Page View Controller-->
         <scene sceneID="elS-hJ-pzq">
@@ -1497,9 +1501,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="5vR-SR-ed3"/>
-        <segue reference="MbS-gu-VDa"/>
-        <segue reference="Fot-U0-ngo"/>
-        <segue reference="eAa-db-ma3"/>
+        <segue reference="I9O-1H-K8f"/>
+        <segue reference="Qei-fu-hzL"/>
+        <segue reference="nRv-dW-TFz"/>
+        <segue reference="HP4-Cd-dxp"/>
         <segue reference="Bvb-2a-bJh"/>
     </inferredMetricsTieBreakers>
 </document>

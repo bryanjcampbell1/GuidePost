@@ -26,13 +26,32 @@ class AdventureFrontPageUserViewController: UIViewController {
     
     @IBOutlet weak var startAdventureButton: UIButton!
     
+    var passedEvent = EventObject()
+    var purchased = 0
+    var purchasedEvents: [String] = ["hf774k39d","ld02pfn23","dksf333f"]
+    
+    @IBAction func startAdventureTapped(_ sender: AnyObject) {
+  
+        if purchasedEvents.contains(passedEvent.EventID!) { //should work on "cold teas"
+            
+            performSegue(withIdentifier: "StartToStop", sender: nil)
+
+        }
+        else{
+            
+            let alert = UIAlertController(title: "Warning", message: "Max nuber of stops is 10", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     @IBAction func viewGalleryPressed(_ sender: AnyObject) {
     
+        
         //ViewGallery
         performSegue(withIdentifier: "ViewGallery", sender: nil)
         
     }
-    var passedEvent = EventObject()
+
     
     override func viewWillAppear(_ animated: Bool) {
         adventureName.text = passedEvent.EventName
@@ -44,7 +63,6 @@ class AdventureFrontPageUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,17 +73,15 @@ class AdventureFrontPageUserViewController: UIViewController {
     //--------------------------segue methods-------------------------------//
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        //func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+
         if segue.identifier == "ViewGallery"{
             let vc = segue.destination as! AdventureGalleryViewController
             vc.newEvent = passedEvent
-            
-            print("segue to gallery")
-            print(vc.newEvent.cellImages.count)
         }
     }
-    
+    //does passedEvent.ObjectID show up in purchashedEventsArray
+    // --> purchashedEventsArray could be querried for when app first opens and passed through
+    // if not --> show alertView to block startAdventureButton
     
     
     
