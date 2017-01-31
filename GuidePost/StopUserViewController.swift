@@ -50,6 +50,10 @@ class StopUserViewController: UIViewController {
         stopCounter = stopCounter + 1
         print(stopCounter)
         
+        if stopCounter == passedEvent.NumberOfStops {
+            nextStopButton.setTitle("End Adventure",for: .normal)
+        }
+        
         //set all display text here based on stop number
         if stopCounter == 1 {
             stopName.text = passedEvent.StopName1
