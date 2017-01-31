@@ -1011,7 +1011,7 @@
                                     <action selector="viewGalleryPressed:" destination="Ps4-B8-Lkc" eventType="touchUpInside" id="HSV-fW-Mea"/>
                                 </connections>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-TA-3gm">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FKQ-TA-3gm">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9yE-E3-xjA">
                                         <constraints>
@@ -1249,7 +1249,8 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="L49-pF-Hn9" kind="show" id="2BU-fS-PPN"/>
+                                    <action selector="mapButtonPressed:" destination="Xfy-8l-GxA" eventType="touchUpInside" id="Ubm-7R-5jZ"/>
+                                    <segue destination="L49-pF-Hn9" kind="show" identifier="StopToMap" id="2BU-fS-PPN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxJ-lE-wMz">
@@ -1267,6 +1268,10 @@
                                 <state key="normal" title="Next Stop">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextStopPressed:" destination="Xfy-8l-GxA" eventType="touchUpInside" id="6ir-jX-2Ol"/>
+                                    <segue destination="Xfy-8l-GxA" kind="show" identifier="NextStop" id="kCa-BJ-j0p"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop Name Here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbK-i6-eWa">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1312,7 +1317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCo-6Y-AFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3042.4000000000001" y="-1966.8665667166417"/>
+            <point key="canvasLocation" x="-2758" y="-2078"/>
         </scene>
         <!--Map Page View Controller-->
         <scene sceneID="elS-hJ-pzq">
@@ -1370,7 +1375,8 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xfy-8l-GxA" kind="show" id="Pqf-30-gg9"/>
+                                    <action selector="previosButtonPressed:" destination="L49-pF-Hn9" eventType="touchUpInside" id="OOT-Yc-9Zq"/>
+                                    <segue destination="Xfy-8l-GxA" kind="show" identifier="MapToStop" id="Pqf-30-gg9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1402,7 +1408,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X91-wC-gJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2543.1999999999998" y="-1265.217391304348"/>
+            <point key="canvasLocation" x="-3562" y="-1320"/>
         </scene>
         <!--Rate Adventure View Controller-->
         <scene sceneID="Ncw-gI-svj">
@@ -1533,12 +1539,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HP4-Cd-dxp"/>
-        <segue reference="5vR-SR-ed3"/>
-        <segue reference="tM6-V7-IvK"/>
-        <segue reference="I9O-1H-K8f"/>
-        <segue reference="Qei-fu-hzL"/>
-        <segue reference="nRv-dW-TFz"/>
+        <segue reference="Pqf-30-gg9"/>
+        <segue reference="44d-Pb-5uW"/>
+        <segue reference="DsH-MV-C7H"/>
+        <segue reference="v3j-qv-Whr"/>
         <segue reference="Bvb-2a-bJh"/>
+        <segue reference="tM6-V7-IvK"/>
+        <segue reference="5vR-SR-ed3"/>
     </inferredMetricsTieBreakers>
 </document>

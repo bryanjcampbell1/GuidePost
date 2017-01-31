@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class EventObject {
     var EventName: String?
@@ -15,6 +16,8 @@ class EventObject {
     var EventID: String?
     //var EventRating: Double
     var EventRating = 0.0
+    
+    
     
     
     var Tags: String?
@@ -31,6 +34,20 @@ class EventObject {
     var EighthAddress: String?
     var NinethAddress: String?
     var TenthAddress: String?
+    
+    var FirstLocation: CLLocation?
+    var SecondLocation: CLLocation?
+    var ThirdLocation: CLLocation?
+    var FourthLocation: CLLocation?
+    var FifthLocation: CLLocation?
+    var SixthLocation: CLLocation?
+    var SeventhLocation: CLLocation?
+    var EighthLocation: CLLocation?
+    var NinethLocation: CLLocation?
+    var TenthLocation: CLLocation?
+    
+    var defaultLocation = CLLocationCoordinate2D(latitude: 21.282778, longitude: -157.829444)
+    
     
     var FirstName: String?
     var SecondName: String?

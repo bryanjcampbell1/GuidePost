@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 class SearchScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -144,6 +145,8 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent.cellImages.append(#imageLiteral(resourceName: "imgres.jpg"))
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent.EventRating = 4.1
+        newEvent.FirstLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        
         
         //create an event to diplay
         newEvent2.EventID = "ld0juygn23"

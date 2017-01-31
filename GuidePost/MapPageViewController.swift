@@ -22,24 +22,32 @@ class MapPageViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     
-   
+    @IBAction func previosButtonPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: "MapToStop", sender: nil)
+    }
     
-    
+   var passedEvent = EventObject()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        // set initial location in Honolulu
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         
-        centerMapOnLocation(location: initialLocation)
+        let initialLocation = passedEvent.defaultLocation
+
+        centerMapOnLocation(location: CLLocation(latitude: initialLocation.latitude, longitude: initialLocation.longitude))
         
-        // show artwork on map
-        let artwork = EventAnnotation(title: "King David Kalakaua",
+        // show stop on map
+        let eventStop = EventAnnotation(title: "First Spot Name",
                               locationName: "Waikiki Gateway Park",
                               discipline: "Sculpture",
-                              coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
+                              coordinate: initialLocation)
         
-        mapView.addAnnotation(artwork)
+        
+        
+        
+        
+        
+        
+        mapView.addAnnotation(eventStop)
 
     }
     
@@ -55,5 +63,12 @@ class MapPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "MapToStop"{
+            let vc = segue.destination as! StopUserViewController
+            vc.passedEvent = passedEvent
+        }
+    }
     
 }

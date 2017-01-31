@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //add paywall --> decide on payment style
 
 //UI
-//1) 
+//1) Creator typed address needs to be converted to lat long
 //2) 
 //3)
 //4)
