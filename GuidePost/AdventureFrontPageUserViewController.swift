@@ -58,6 +58,37 @@ class AdventureFrontPageUserViewController: UIViewController {
         guideName.text = passedEvent.UserID
         adventureDescription.text = passedEvent.MainDescription
         backgroundImage.image = passedEvent.MainPicture
+        
+        if passedEvent.EventRating > 4.5{
+            starsImage.image = #imageLiteral(resourceName: "Star1.png")
+        }
+        else if passedEvent.EventRating > 4{
+            starsImage.image = #imageLiteral(resourceName: "Star2")
+        }
+        else if passedEvent.EventRating > 3.5{
+            starsImage.image = #imageLiteral(resourceName: "Star3")
+        }
+        else if passedEvent.EventRating > 3{
+            starsImage.image = #imageLiteral(resourceName: "Star4.png")
+        }
+        else if passedEvent.EventRating > 2.5{
+            starsImage.image = #imageLiteral(resourceName: "Star5.png")
+        }
+        else if passedEvent.EventRating > 2{
+            starsImage.image = #imageLiteral(resourceName: "Star6")
+        }
+        else if passedEvent.EventRating > 1.5{
+            starsImage.image = #imageLiteral(resourceName: "Star7.png")
+        }
+        else if passedEvent.EventRating > 1{
+            starsImage.image = #imageLiteral(resourceName: "Star8.jpg")
+        }
+        else if passedEvent.EventRating > 0.5{
+            starsImage.image = #imageLiteral(resourceName: "Star9")
+        }
+        else{
+            starsImage.image = #imageLiteral(resourceName: "Star10")
+        }
     }
     
     override func viewDidLoad() {

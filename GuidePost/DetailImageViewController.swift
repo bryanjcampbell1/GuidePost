@@ -11,15 +11,18 @@ import UIKit
 class DetailImageViewController: UIViewController {
 
     var passedEvent = EventObject()
+    var celltapped: Int?
     
     @IBOutlet weak var imageView: UIImageView!
     
     @IBAction func backButtonPressed(_ sender: AnyObject) {
+        performSegue(withIdentifier: "DetailToGallery", sender: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        imageView.image = passedEvent.cellImages[celltapped!]
         // Do any additional setup after loading the view.
     }
 

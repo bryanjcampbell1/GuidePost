@@ -10,11 +10,9 @@ import Foundation
 import UIKit
 
 class AdventureGalleryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    //var cellImages: [UIImage] = []
-
-    
+ 
     var newEvent = EventObject()
+    var celltapped: Int?
     
     @IBOutlet weak var collection: UICollectionView!
     
@@ -60,6 +58,10 @@ class AdventureGalleryViewController: UIViewController, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         print("You selected cell #\(indexPath.item)!")
+        celltapped = indexPath.item
+        
+        performSegue(withIdentifier: "GalleryToDetail", sender: nil)
+        
     }
     
     // change background color when user touches cell
@@ -86,6 +88,7 @@ class AdventureGalleryViewController: UIViewController, UICollectionViewDataSour
         else if segue.identifier == "GalleryToDetail"{
             let vc = segue.destination as! DetailImageViewController
             vc.passedEvent = newEvent
+            vc.celltapped = celltapped
             
             //Also pass the ifo of which cell was tapped
             

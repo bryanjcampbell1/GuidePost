@@ -141,8 +141,9 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent.FirstDescription = "Dont stop!!"
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent.cellImages.append(#imageLiteral(resourceName: "imgres.jpg"))
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
-        newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent.EventRating = 4.1
         
         //create an event to diplay
         newEvent2.EventID = "ld0juygn23"
@@ -157,7 +158,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent2.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent2.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent2.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
-        
+        newEvent2.EventRating = 3.7
         
         //create an event to diplay
         newEvent3.EventName = "Pants off Dance off"
@@ -174,6 +175,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent3.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
+        newEvent3.EventRating = 2.7
         
         //----------------------------------------------------------------------------------------------//
         

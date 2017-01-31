@@ -45,18 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 // remove home view controller?  -->  doesnt reall add much --> adds in tableView?
-//
-//change the filters in searchVC to be segmented control
-//
-//add paywall
+//add paywall --> decide on payment style
 
 //UI
-//1)
+//1) 
 //2) 
 //3) Create new stops to go along with the fakeEvents for testing pages
 //4)
 //5)
-//6) make collectionview cells expand to detailview when tapped
+//6)
 //7)
 //8)
 //9) Add star rating --> How does this fit in with eventObject? -->Should be a property

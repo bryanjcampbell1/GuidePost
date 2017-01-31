@@ -13,6 +13,9 @@ class EventObject {
     var EventName: String?
     var UserID: String?
     var EventID: String?
+    //var EventRating: Double
+    var EventRating = 0.0
+    
     
     var Tags: String?
     var MainDescription: String?
