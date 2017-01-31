@@ -50,13 +50,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //UI
 //1) 
 //2) 
-//3) Create new stops to go along with the fakeEvents for testing pages
+//3)
 //4)
 //5)
 //6)
 //7)
 //8)
-//9) Add star rating --> How does this fit in with eventObject? -->Should be a property
+//9)
 //10) Design profile page
 
 
