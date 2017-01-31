@@ -35,6 +35,60 @@ class EventObject {
     var NinethAddress: String?
     var TenthAddress: String?
     
+    //newNames --------------------------//
+    var StopName1 = ""
+    var StopDescription1 = ""
+    var StopAddress1: String?
+    var Location1: CLLocation?
+    
+    var StopName2 = ""
+    var StopDescription2 = ""
+    var StopAddress2: String?
+    var Location2: CLLocation?
+    
+    var StopName3 = ""
+    var StopDescription3 = ""
+    var StopAddress3: String?
+    var Location3: CLLocation?
+    
+    var StopName4 = ""
+    var StopDescription4 = ""
+    var StopAddress4: String?
+    var Location4: CLLocation?
+    
+    var StopName5 = ""
+    var StopDescription5 = ""
+    var StopAddress5: String?
+    var Location5: CLLocation?
+    
+    var StopName6 = ""
+    var StopDescription6 = ""
+    var StopAddress6: String?
+    var Location6: CLLocation?
+    
+    var StopName7 = ""
+    var StopDescription7 = ""
+    var StopAddress7: String?
+    var Location7: CLLocation?
+    
+    var StopName8 = ""
+    var StopDescription8 = ""
+    var StopAddress8: String?
+    var Location8: CLLocation?
+    
+    var StopName9 = ""
+    var StopDescription9 = ""
+    var StopAddress9: String?
+    var Location9: CLLocation?
+    
+    
+    var StopName10 = ""
+    var StopDescription10 = ""
+    var StopAddress10: String?
+    var Location10: CLLocation?
+    
+    
+    //----------------------------------//
     var FirstLocation: CLLocation?
     var SecondLocation: CLLocation?
     var ThirdLocation: CLLocation?

@@ -40,12 +40,7 @@ class MapPageViewController: UIViewController {
                               locationName: "Waikiki Gateway Park",
                               discipline: "Sculpture",
                               coordinate: initialLocation)
-        
-        
-        
-        
-        
-        
+
         
         mapView.addAnnotation(eventStop)
 

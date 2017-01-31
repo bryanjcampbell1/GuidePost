@@ -24,6 +24,7 @@ class StopUserViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     
     var passedEvent = EventObject()
+    var stopCounter = 0
     
     
     @IBAction func mapButtonPressed(_ sender: AnyObject) {
@@ -39,6 +40,60 @@ class StopUserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        stopCounter = stopCounter + 1
+        print(stopCounter)
+        
+        //set all display text here based on stop number
+        if stopCounter == 1 {
+            stopName.text = passedEvent.StopName1
+            stopInstructions.text = passedEvent.StopDescription1
+            print("inside1")
+        }
+        else if stopCounter == 2 {
+            stopName.text = passedEvent.StopName2
+            stopInstructions.text = passedEvent.StopDescription2
+            print("inside2")
+        }
+        else if stopCounter == 3 {
+            stopName.text = passedEvent.StopName3
+            stopInstructions.text = passedEvent.StopDescription3
+            print("inside3")
+        }
+        else if stopCounter == 4 {
+            stopName.text = passedEvent.StopName4
+            stopInstructions.text = passedEvent.StopDescription4
+        }
+        else if stopCounter == 5 {
+            stopName.text = passedEvent.StopName5
+            stopInstructions.text = passedEvent.StopDescription5
+        }
+        else if stopCounter == 6 {
+            stopName.text = passedEvent.StopName6
+            stopInstructions.text = passedEvent.StopDescription6
+        }
+        else if stopCounter == 7 {
+            stopName.text = passedEvent.StopName7
+            stopInstructions.text = passedEvent.StopDescription7
+        }
+        else if stopCounter == 8 {
+            stopName.text = passedEvent.StopName8
+            stopInstructions.text = passedEvent.StopDescription8
+        }
+        else if stopCounter == 9 {
+            stopName.text = passedEvent.StopName9
+            stopInstructions.text = passedEvent.StopDescription1
+        }
+        else if stopCounter == 10 {
+            stopName.text = passedEvent.StopName9
+            stopInstructions.text = passedEvent.StopDescription1
+        }
+        else{
+            print("error with stopCounter")
+        }
+
+        
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +112,7 @@ class StopUserViewController: UIViewController {
         else if segue.identifier == "NextStop"{
             let vc = segue.destination as! StopUserViewController
             vc.passedEvent = passedEvent
+            vc.stopCounter = stopCounter
         }
     }
     

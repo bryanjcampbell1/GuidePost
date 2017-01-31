@@ -130,22 +130,42 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         let newEvent3 = EventObject()
         
         
+        
         //create an event to diplay
+        
+        //Front page
         newEvent.EventName = "Cold Teas"
         newEvent.Tags = "Late Night, Drinks"
         newEvent.FirstAddress = "72 Chinatown St."
         newEvent.MainDescription = "Late night speakeasy with greasy comfort food,  Excellent post night-out meal.  Make sure to order the cold tea."
-        //newEvent.MainPicture = #imageLiteral(resourceName: "images.jpg")
         newEvent.FirstName = "Moonvilla"
         newEvent.EventID = "ld02pfn23"
-        //someEvent.FirstPic = stopImage.image
-        newEvent.FirstDescription = "Dont stop!!"
+        newEvent.EventRating = 4.1
+        
+        //eventGallery
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
         newEvent.cellImages.append(#imageLiteral(resourceName: "imgres.jpg"))
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))
-        newEvent.EventRating = 4.1
+        
+        //Stops
+        newEvent.FirstDescription = "Dont stop!!"
         newEvent.FirstLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        
+        newEvent.StopName1 = "Moonvilla"
+        newEvent.StopDescription1 = "Come here at 2 am after the bars have closed.  Sit at one of the round tables near the fish tanks and ask for chicken fingers and cold teas."
+        newEvent.StopAddress1 = ""
+        newEvent.Location1 = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        
+        newEvent.StopName2 = "Dirt"
+        newEvent.StopDescription2 = " Bostons hottest new club is called Dirt.  Enter through the backdoor of the Moonvilla resturant and climb the tall steep steps untill you hear house music.  Do not go in.  Text the number 339 933 0284 that you are outside and you will be invited in"
+        newEvent.StopAddress2 = ""
+        newEvent.Location2 = CLLocation(latitude: 21.282778, longitude: -157.829444)
+        
+        newEvent.StopName3 = "Midnight Test"
+        newEvent.StopDescription3 = "Complete your experience with some late night gambling. Find the man with blue hair and introduce yourself.  He will take you to a backroom where you will meet our chessmaster.  There you can negotiate the terms of the bet."
+        newEvent.StopAddress3 = ""
+        newEvent.Location3 = CLLocation(latitude: 21.282778, longitude: -157.829444)
         
         
         //create an event to diplay

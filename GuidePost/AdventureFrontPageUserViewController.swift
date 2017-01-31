@@ -109,6 +109,10 @@ class AdventureFrontPageUserViewController: UIViewController {
             let vc = segue.destination as! AdventureGalleryViewController
             vc.newEvent = passedEvent
         }
+        if segue.identifier == "StartToStop"{
+            let vc = segue.destination as! StopUserViewController
+            vc.passedEvent = passedEvent
+        }
     }
     //does passedEvent.ObjectID show up in purchashedEventsArray
     // --> purchashedEventsArray could be querried for when app first opens and passed through
