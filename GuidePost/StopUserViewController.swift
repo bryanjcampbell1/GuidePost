@@ -34,9 +34,16 @@ class StopUserViewController: UIViewController {
     
     @IBAction func nextStopPressed(_ sender: AnyObject) {
         
-        performSegue(withIdentifier: "NextStop", sender: nil)
+        if stopCounter < passedEvent.NumberOfStops {
+            performSegue(withIdentifier: "NextStop", sender: nil)
+        }
+        else{
+            performSegue(withIdentifier: "StopToEnd", sender: nil)
+        }
+        
         
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -113,6 +120,11 @@ class StopUserViewController: UIViewController {
             let vc = segue.destination as! StopUserViewController
             vc.passedEvent = passedEvent
             vc.stopCounter = stopCounter
+        }
+        else if segue.identifier == "StopToEnd"{
+            let vc = segue.destination as! RateAdventureViewController
+            vc.passedEvent = passedEvent
+            
         }
     }
     

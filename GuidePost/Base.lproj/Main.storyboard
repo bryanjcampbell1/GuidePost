@@ -1313,6 +1313,7 @@
                         <outlet property="searchButton" destination="CVE-h8-Mll" id="aZt-O5-2Z7"/>
                         <outlet property="stopInstructions" destination="zjg-eO-bSK" id="BSy-Ef-8x2"/>
                         <outlet property="stopName" destination="jbK-i6-eWa" id="kdu-Sa-rCd"/>
+                        <segue destination="km0-GM-VOU" kind="show" identifier="StopToEnd" id="cKI-M0-5f3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCo-6Y-AFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1535,16 +1536,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwy-1h-UWz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1906" y="-1265"/>
+            <point key="canvasLocation" x="-1798" y="-2078"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pqf-30-gg9"/>
-        <segue reference="44d-Pb-5uW"/>
-        <segue reference="DsH-MV-C7H"/>
-        <segue reference="v3j-qv-Whr"/>
-        <segue reference="Bvb-2a-bJh"/>
-        <segue reference="tM6-V7-IvK"/>
+        <segue reference="HP4-Cd-dxp"/>
         <segue reference="5vR-SR-ed3"/>
+        <segue reference="tM6-V7-IvK"/>
+        <segue reference="i1a-Z5-6Ir"/>
+        <segue reference="j9s-bL-Ehf"/>
+        <segue reference="geT-mR-nqS"/>
+        <segue reference="Bvb-2a-bJh"/>
     </inferredMetricsTieBreakers>
 </document>

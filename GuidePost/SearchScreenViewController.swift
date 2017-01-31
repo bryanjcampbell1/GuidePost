@@ -141,6 +141,7 @@ class SearchScreenViewController: UIViewController, UITableViewDelegate, UITable
         newEvent.FirstName = "Moonvilla"
         newEvent.EventID = "ld02pfn23"
         newEvent.EventRating = 4.1
+        newEvent.NumberOfStops = 3
         
         //eventGallery
         newEvent.cellImages.append(#imageLiteral(resourceName: "images.jpg"))

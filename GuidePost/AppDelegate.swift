@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //UI
 //1) Creator typed address needs to be converted to lat long
 //2) Add more stops to dummy Events including stopName properties --> use to set StopName in mapview
-//3) Set up stop counter
+//3) Set up stop counter 
 //4)
 //5)
 //6)

@@ -26,7 +26,7 @@ class RateAdventureViewController: UIViewController {
     @IBOutlet weak var profileButton: UIButton!
     @IBOutlet weak var createButton: UIButton!
     
-    
+    var passedEvent = EventObject()
     
     override func viewDidLoad() {
         super.viewDidLoad()
