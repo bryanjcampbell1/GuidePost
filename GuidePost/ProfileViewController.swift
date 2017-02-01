@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
 
+    var animal = ["VISA *** *** 9600","Citizens"]
+    var plant = ["Citizens 8503","DCU 9210"]
+    
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     
@@ -33,31 +37,76 @@ class ProfileViewController: UIViewController {
     @IBAction func backButtonPressed(_ sender: AnyObject) {
         performSegue(withIdentifier: "BackToHome", sender: nil)
     }
-    
-    
-    
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        paymentTableview.dataSource = self
+        paymentTableview.delegate = self
+        paymentTableview.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        depositsTableView.dataSource = self
+        depositsTableView.delegate = self
+        depositsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell1")
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // MARK: - Table view data source
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    // number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if tableView == self.paymentTableview {
+            return self.animal.count
+        }
+            
+        else { // tableView == tableView2
+            
+            print(self.plant.count)
+            return self.plant.count
+            
+        }
+        
     }
-    */
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        var cell:UITableViewCell = self.paymentTableview.dequeueReusableCell(withIdentifier: "cell") as UITableViewCell!
+        
+        if tableView == self.paymentTableview {
+            
+            // set the text from the data model
+            cell.textLabel?.text = self.animal[(indexPath as NSIndexPath).row]
+        }
+            
+        else { // tableView == tableView2
+            // create a new cell if needed or reuse an old one
+            cell = self.depositsTableView.dequeueReusableCell(withIdentifier: "cell1") as UITableViewCell!
+            
+            // set the text from the data model
+            cell.textLabel?.text = self.plant[(indexPath as NSIndexPath).row]
+            print(self.plant[(indexPath as NSIndexPath).row])
+        }
+        
+        return cell
+    }
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \((indexPath as NSIndexPath).row).")
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

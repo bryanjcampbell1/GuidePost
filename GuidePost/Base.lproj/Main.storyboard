@@ -179,7 +179,7 @@
                                     <constraint firstAttribute="height" constant="79" id="1m6-3W-QRS"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="30" id="5Lh-K5-UlU">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="30" id="5Lh-K5-UlU">
                                         <rect key="frame" x="0.0" y="28" width="313" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Lh-K5-UlU" id="gCk-g5-Sxt">
@@ -195,7 +195,7 @@
                                     <constraint firstAttribute="height" constant="79" id="jTU-f1-XLJ"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="30" id="XLL-9l-9xh">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="30" id="XLL-9l-9xh">
                                         <rect key="frame" x="0.0" y="28" width="313" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XLL-9l-9xh" id="4qX-Hx-1cY">
@@ -257,6 +257,8 @@
                     <connections>
                         <outlet property="addDepositButton" destination="mSq-AB-BaE" id="ir7-My-Dgs"/>
                         <outlet property="addPaymentButton" destination="hHg-co-cKj" id="yuo-7c-5z5"/>
+                        <outlet property="depositsTableView" destination="52y-CW-wm7" id="Qqm-JU-pdB"/>
+                        <outlet property="paymentTableview" destination="3OP-hh-ZPZ" id="BR1-5S-cMf"/>
                         <outlet property="profilePic" destination="PaE-8S-hWS" id="axi-1d-h4y"/>
                         <outlet property="userName" destination="78d-l5-U6w" id="OpA-i5-Bog"/>
                         <segue destination="QNq-wt-nWd" kind="show" identifier="BackToHome" id="Aqj-KQ-TNi"/>
