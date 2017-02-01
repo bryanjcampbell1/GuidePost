@@ -154,7 +154,7 @@
                                     <constraint firstAttribute="width" constant="30" id="j6R-be-kgm"/>
                                     <constraint firstAttribute="height" constant="30" id="xKT-32-Vrd"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" backgroundImage="addButton.jpg"/>
                                 <connections>
                                     <action selector="addPaymentOption:" destination="vwq-Pi-ul9" eventType="touchUpInside" id="4lD-bk-56a"/>
                                 </connections>
@@ -180,10 +180,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="30" id="5Lh-K5-UlU">
-                                        <rect key="frame" x="0.0" y="28" width="313" height="30"/>
+                                        <rect key="frame" x="0.0" y="28" width="318" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Lh-K5-UlU" id="gCk-g5-Sxt">
-                                            <frame key="frameInset" width="313" height="29"/>
+                                            <frame key="frameInset" width="318" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -196,10 +196,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="30" id="XLL-9l-9xh">
-                                        <rect key="frame" x="0.0" y="28" width="313" height="30"/>
+                                        <rect key="frame" x="0.0" y="28" width="318" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XLL-9l-9xh" id="4qX-Hx-1cY">
-                                            <frame key="frameInset" width="313" height="29"/>
+                                            <frame key="frameInset" width="318" height="29"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -211,7 +211,7 @@
                                     <constraint firstAttribute="height" constant="30" id="Xm0-ob-7Ld"/>
                                     <constraint firstAttribute="width" constant="30" id="hkI-1i-EQd"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" backgroundImage="addButton.jpg"/>
                                 <connections>
                                     <action selector="addDepositOption:" destination="vwq-Pi-ul9" eventType="touchUpInside" id="6O0-mx-dQa"/>
                                 </connections>
@@ -235,7 +235,7 @@
                             <constraint firstItem="F6Z-jp-nB2" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leading" id="HcO-qX-TtT"/>
                             <constraint firstAttribute="trailing" secondItem="F6Z-jp-nB2" secondAttribute="trailing" id="Hiu-J8-cyf"/>
                             <constraint firstItem="78d-l5-U6w" firstAttribute="top" secondItem="F6Z-jp-nB2" secondAttribute="bottom" constant="8" id="HxZ-1X-0wB"/>
-                            <constraint firstItem="52y-CW-wm7" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leadingMargin" constant="15" id="KPe-fS-p6i"/>
+                            <constraint firstItem="52y-CW-wm7" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leadingMargin" constant="10" id="KPe-fS-p6i"/>
                             <constraint firstItem="mSq-AB-BaE" firstAttribute="top" secondItem="52y-CW-wm7" secondAttribute="bottom" constant="8" id="MOM-fk-eaU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3OP-hh-ZPZ" secondAttribute="trailing" constant="15" id="VY5-hx-642"/>
                             <constraint firstItem="52y-CW-wm7" firstAttribute="top" secondItem="8PA-W6-fCu" secondAttribute="bottom" constant="8" id="VZn-Ag-CO7"/>
@@ -243,7 +243,7 @@
                             <constraint firstItem="F6Z-jp-nB2" firstAttribute="top" secondItem="nhD-6g-tr2" secondAttribute="top" id="bE3-5E-gAn"/>
                             <constraint firstItem="8PA-W6-fCu" firstAttribute="top" secondItem="hHg-co-cKj" secondAttribute="bottom" constant="8" id="ccL-e4-Baa"/>
                             <constraint firstItem="yAR-yF-kiC" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leadingMargin" constant="-7" id="daI-7b-oPB"/>
-                            <constraint firstItem="3OP-hh-ZPZ" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leadingMargin" constant="15" id="grM-XJ-BgA"/>
+                            <constraint firstItem="3OP-hh-ZPZ" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leadingMargin" constant="10" id="grM-XJ-BgA"/>
                             <constraint firstItem="PaE-8S-hWS" firstAttribute="top" secondItem="F6Z-jp-nB2" secondAttribute="bottom" constant="26" id="h8B-c1-5sN"/>
                             <constraint firstItem="3OP-hh-ZPZ" firstAttribute="top" secondItem="yAR-yF-kiC" secondAttribute="bottom" constant="9" id="jZq-9b-eLK"/>
                             <constraint firstItem="hHg-co-cKj" firstAttribute="leading" secondItem="nhD-6g-tr2" secondAttribute="leadingMargin" constant="15" id="jeZ-VP-oSg"/>
@@ -1692,6 +1692,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="addButton.jpg" width="102" height="102"/>
         <image name="blankProfile.jpg" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
