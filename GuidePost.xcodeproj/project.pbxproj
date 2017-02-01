@@ -22,6 +22,9 @@
 		FD45CC2A1E4032A900CEDBC6 /* Star9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD45CC201E4032A900CEDBC6 /* Star9.jpg */; };
 		FD45CC2B1E4032A900CEDBC6 /* Star10.png in Resources */ = {isa = PBXBuildFile; fileRef = FD45CC211E4032A900CEDBC6 /* Star10.png */; };
 		FD45CC2D1E4032CD00CEDBC6 /* Stars in Resources */ = {isa = PBXBuildFile; fileRef = FD45CC2C1E4032CD00CEDBC6 /* Stars */; };
+		FD45CC2F1E417AAF00CEDBC6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD45CC2E1E417AAF00CEDBC6 /* ProfileViewController.swift */; };
+		FD45CC321E42302100CEDBC6 /* blankProfile.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD45CC301E42302100CEDBC6 /* blankProfile.jpg */; };
+		FD45CC331E42302100CEDBC6 /* addButton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD45CC311E42302100CEDBC6 /* addButton.jpg */; };
 		FD4C89A71E2987AD00207AF2 /* EventObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C89A61E2987AD00207AF2 /* EventObjectClass.swift */; };
 		FD4C89A91E2AA62800207AF2 /* SearchObjectClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */; };
 		FD4C89AB1E2C054300207AF2 /* images.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FD4C89AA1E2C054300207AF2 /* images.jpg */; };
@@ -72,6 +75,9 @@
 		FD45CC201E4032A900CEDBC6 /* Star9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Star9.jpg; path = Stars/Star9.jpg; sourceTree = "<group>"; };
 		FD45CC211E4032A900CEDBC6 /* Star10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star10.png; path = Stars/Star10.png; sourceTree = "<group>"; };
 		FD45CC2C1E4032CD00CEDBC6 /* Stars */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Stars; sourceTree = "<group>"; };
+		FD45CC2E1E417AAF00CEDBC6 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FD45CC301E42302100CEDBC6 /* blankProfile.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blankProfile.jpg; sourceTree = "<group>"; };
+		FD45CC311E42302100CEDBC6 /* addButton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = addButton.jpg; sourceTree = "<group>"; };
 		FD4C89A61E2987AD00207AF2 /* EventObjectClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventObjectClass.swift; sourceTree = "<group>"; };
 		FD4C89A81E2AA62800207AF2 /* SearchObjectClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchObjectClass.swift; path = ../SearchObjectClass.swift; sourceTree = "<group>"; };
 		FD4C89AA1E2C054300207AF2 /* images.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpg; sourceTree = "<group>"; };
@@ -156,11 +162,14 @@
 				FDEBE6771D874CB400D39D1C /* StopUserViewController.swift */,
 				FDEBE67B1D874D5300D39D1C /* RateAdventureViewController.swift */,
 				FDEBE6551D80DAC600D39D1C /* Main.storyboard */,
+				FD45CC2E1E417AAF00CEDBC6 /* ProfileViewController.swift */,
 				FD45CC0E1E3C055900CEDBC6 /* EventAnnotation.swift */,
 				FDEF79AA1E3599D300106985 /* NewCollectionViewCell.swift */,
 				FDEF79AE1E396D6900106985 /* AnotherCollectionViewCell.swift */,
 				FD45CC121E4026F700CEDBC6 /* imgres.jpg */,
 				FD4C89AA1E2C054300207AF2 /* images.jpg */,
+				FD45CC301E42302100CEDBC6 /* blankProfile.jpg */,
+				FD45CC311E42302100CEDBC6 /* addButton.jpg */,
 				FD45CC161E40326000CEDBC6 /* Star1.png */,
 				FD45CC181E4032A900CEDBC6 /* Star1.png */,
 				FD45CC2C1E4032CD00CEDBC6 /* Stars */,
@@ -289,6 +298,7 @@
 			files = (
 				FD45CC171E40326000CEDBC6 /* Star1.png in Resources */,
 				FDEBE6571D80DAC600D39D1C /* Main.storyboard in Resources */,
+				FD45CC321E42302100CEDBC6 /* blankProfile.jpg in Resources */,
 				FD45CC281E4032A900CEDBC6 /* Star7.png in Resources */,
 				FD45CC251E4032A900CEDBC6 /* Star4.png in Resources */,
 				FD45CC131E4026F700CEDBC6 /* imgres.jpg in Resources */,
@@ -302,6 +312,7 @@
 				FD45CC2A1E4032A900CEDBC6 /* Star9.jpg in Resources */,
 				FD45CC231E4032A900CEDBC6 /* Star2.png in Resources */,
 				FD45CC241E4032A900CEDBC6 /* Star3.png in Resources */,
+				FD45CC331E42302100CEDBC6 /* addButton.jpg in Resources */,
 				FD45CC261E4032A900CEDBC6 /* Star5.png in Resources */,
 				FD45CC291E4032A900CEDBC6 /* Star8.jpg in Resources */,
 			);
@@ -323,6 +334,7 @@
 			files = (
 				FDEBE6781D874CB400D39D1C /* StopUserViewController.swift in Sources */,
 				FDEBE6801D874ED600D39D1C /* CreatePage0neViewController.swift in Sources */,
+				FD45CC2F1E417AAF00CEDBC6 /* ProfileViewController.swift in Sources */,
 				FDEF79AF1E396D6900106985 /* AnotherCollectionViewCell.swift in Sources */,
 				FDEBE67E1D874E6E00D39D1C /* CreateAdventureViewController.swift in Sources */,
 				FDEF79AB1E3599D300106985 /* NewCollectionViewCell.swift in Sources */,
