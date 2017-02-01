@@ -61,11 +61,13 @@ override func viewDidLoad() {
         newEvent.EventName = nameTextField.text
         newEvent.FirstAddress = addressTextField.text
         newEvent.MainDescription = descriptionOfAdventure.text
-        newEvent.MainPicture = adventurePic.image
+        //newEvent.MainPicture = adventurePic.image!
         
         newEvent.Publish = 1
         
         newEvent.saveEventObject()
+        
+        performSegue(withIdentifier: "PageOneToPrice", sender: nil)
         
     }
     @IBAction func addEvent(_ sender: AnyObject) {
@@ -85,6 +87,10 @@ override func viewDidLoad() {
         if segue.identifier == "NextStop"{
             let vc = segue.destination as! CreatePageTwoViewController
             vc.someEvent = newEvent
+        }
+        if segue.identifier == "PageOneToPrice"{
+            let vc = segue.destination as! SetPriceViewController
+            vc.newEvent = newEvent
         }
     }
 

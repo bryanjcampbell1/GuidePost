@@ -370,6 +370,7 @@
                         <outlet property="saveButton" destination="Yqa-wh-mdu" id="izq-iQ-CIA"/>
                         <outlet property="searchButton" destination="pxr-gl-BDP" id="ttV-d0-lsX"/>
                         <outlet property="tagsTextField" destination="nFx-8t-jey" id="x5P-A8-Dlv"/>
+                        <segue destination="NZx-sb-TSd" kind="show" identifier="PageOneToPrice" id="iAC-nT-MK2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uC5-NJ-m9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -532,6 +533,7 @@
                         <outlet property="stopDescription" destination="baP-18-dRI" id="2jR-XB-qwp"/>
                         <outlet property="stopNameTextField" destination="71e-TP-hx9" id="nPl-9J-irz"/>
                         <segue destination="ZfH-Na-6F3" kind="show" identifier="AddPic" id="oBM-sH-HG0"/>
+                        <segue destination="NZx-sb-TSd" kind="show" identifier="PageTwoToPrice" id="Fzq-WP-Ud6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JeZ-oA-LTm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -702,8 +704,7 @@
                                     <segment title="$10"/>
                                 </segments>
                                 <connections>
-                                    <action selector="indexChanged:" destination="NZx-sb-TSd" eventType="valueChanged" id="OuQ-XA-0Pn"/>
-                                    <action selector="price0:" destination="NZx-sb-TSd" eventType="valueChanged" id="ucg-Ic-yKo"/>
+                                    <action selector="indexChanged:" destination="NZx-sb-TSd" eventType="valueChanged" id="nf4-Oe-fMC"/>
                                 </connections>
                             </segmentedControl>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="upP-uK-kY5">
@@ -750,26 +751,18 @@
                     </view>
                     <connections>
                         <outlet property="createButton" destination="m80-EA-eM9" id="pfh-1d-Cuw"/>
-                        <outlet property="donationButton" destination="bcT-SZ-2Qs" id="61Y-jg-bzZ"/>
                         <outlet property="doneButton" destination="P6n-ly-Sz7" id="g3H-3g-5mu"/>
-                        <outlet property="fifteenButton" destination="bcT-SZ-2Qs" id="Vrn-qT-SHA"/>
-                        <outlet property="fiveButton" destination="bcT-SZ-2Qs" id="S2B-4i-hH1"/>
-                        <outlet property="freeButton" destination="bcT-SZ-2Qs" id="cgl-Mr-pNS"/>
                         <outlet property="headerImage" destination="tyz-h1-1Nb" id="YGZ-qK-0xS"/>
                         <outlet property="homeButton" destination="hvT-Cu-P6L" id="XJo-aM-zcz"/>
-                        <outlet property="oneButton" destination="bcT-SZ-2Qs" id="C1K-Vb-WXy"/>
                         <outlet property="otherDollarTextField" destination="39z-Xh-cQo" id="N1B-tW-aJl"/>
                         <outlet property="profileButton" destination="Mze-kR-QtD" id="UcH-jd-Nac"/>
                         <outlet property="searchButton" destination="yWV-ZB-czD" id="9LZ-Ji-xC4"/>
-                        <outlet property="segmentedControl" destination="bcT-SZ-2Qs" id="UIe-jR-Nrz"/>
-                        <outlet property="tenButton" destination="bcT-SZ-2Qs" id="XTS-Ae-im5"/>
-                        <outlet property="twentyButton" destination="bcT-SZ-2Qs" id="bDB-k7-V5h"/>
-                        <outlet property="twoButton" destination="bcT-SZ-2Qs" id="sDY-Jy-we6"/>
+                        <outlet property="segmentedControl" destination="bcT-SZ-2Qs" id="ytK-KY-Txg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CgM-hP-J1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3092" y="1541"/>
+            <point key="canvasLocation" x="-4654" y="1468"/>
         </scene>
         <!--Search Screen View Controller-->
         <scene sceneID="b4W-wU-uP1">
@@ -1542,8 +1535,9 @@
         <segue reference="SjE-fi-xZh"/>
         <segue reference="Y3v-PF-rXs"/>
         <segue reference="MWE-dT-Yxc"/>
+        <segue reference="Fzq-WP-Ud6"/>
+        <segue reference="e2e-vQ-8SJ"/>
         <segue reference="hIg-tW-nNN"/>
         <segue reference="jaG-bY-zI5"/>
-        <segue reference="e2e-vQ-8SJ"/>
     </inferredMetricsTieBreakers>
 </document>

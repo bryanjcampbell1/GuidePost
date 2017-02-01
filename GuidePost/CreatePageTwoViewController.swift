@@ -35,7 +35,6 @@ class CreatePageTwoViewController: UIViewController {
     
     @IBAction func addPictureButtonPressed(_ sender: AnyObject) {
         
-        
         performSegue(withIdentifier: "AddPic", sender: nil)
         
     }
@@ -62,6 +61,7 @@ class CreatePageTwoViewController: UIViewController {
     }
     @IBAction func publish(_ sender: AnyObject) {
         print(update())
+        performSegue(withIdentifier: "PageTwoToPrice", sender: nil)
     }
     @IBAction func addEvent(_ sender: AnyObject) {
         
@@ -160,6 +160,10 @@ class CreatePageTwoViewController: UIViewController {
         else if segue.identifier == "ReloadNewStop"{
             let vc = segue.destination as! CreatePageTwoViewController
             vc.someEvent = someEvent
+        }
+        else if segue.identifier == "PageTwoToPrice"{
+            let vc = segue.destination as! SetPriceViewController
+            vc.newEvent = someEvent
         }
     }
     

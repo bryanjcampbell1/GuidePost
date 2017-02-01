@@ -24,7 +24,7 @@ class SetPriceViewController: UIViewController {
     @IBOutlet weak var createButton: UIButton!
     
     var newEvent = EventObject()
-    var eventPrice : Int = 0
+    var eventPrice = 0
     
     
     override func viewDidLoad() {
