@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate,
+UINavigationControllerDelegate {
     
 
     var animal = ["VISA *** *** 9600","Citizens"]
     var plant = ["Citizens 8503","DCU 9210"]
+    
+    let picker = UIImagePickerController()
     
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
@@ -26,6 +29,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     
     @IBAction func addProfilePic(_ sender: AnyObject) {
+        picker.allowsEditing = false
+        picker.sourceType = .photoLibrary
+        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
+        picker.modalPresentationStyle = .popover
+        present(picker, animated: true, completion: nil)
+        
     }
     
     @IBAction func addPaymentOption(_ sender: AnyObject) {
@@ -44,6 +53,7 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        picker.delegate = self
         
         paymentTableview.dataSource = self
         paymentTableview.delegate = self
@@ -108,6 +118,29 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         print("You tapped cell number \((indexPath as NSIndexPath).row).")
     }
 
+    
+    
+    //MARK: - Delegates
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [String : AnyObject])
+    {
+        var  chosenImage = UIImage()
+        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
+        
+        //newEvent.cellImages.append(chosenImage)
+        
+        //self.collection.reloadData()
+        
+        profilePic.image = chosenImage
+        
+        dismiss(animated:true, completion: nil) //5
+    }
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "BackToHome"{

@@ -26,6 +26,11 @@ class SetPriceViewController: UIViewController {
     var newEvent = EventObject()
     var eventPrice = 0
     
+    @IBAction func donePressed(_ sender: AnyObject) {
+        //DoneToCreate
+        performSegue(withIdentifier: "DoneToCreate", sender: nil)
+        //update price in db
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

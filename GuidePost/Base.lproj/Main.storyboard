@@ -168,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xof-MV-IJu">
-                                <state key="normal" title="Back"/>
+                                <state key="normal" title="Home"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="vwq-Pi-ul9" eventType="touchUpInside" id="9uw-2A-a48"/>
                                 </connections>
@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vW3-zq-2K3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4353" y="-571"/>
+            <point key="canvasLocation" x="-3366" y="-458"/>
         </scene>
         <!--Create Adventure View Controller-->
         <scene sceneID="Xla-C1-sEx">
@@ -377,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPa-Zr-jzH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4862" y="716"/>
+            <point key="canvasLocation" x="-4935" y="928"/>
         </scene>
         <!--Create Page One View Controller-->
         <scene sceneID="eim-cr-cDR">
@@ -898,6 +898,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="donePressed:" destination="NZx-sb-TSd" eventType="touchUpInside" id="vDf-AP-zOh"/>
                                     <action selector="setPrice:" destination="NZx-sb-TSd" eventType="touchUpInside" id="VPR-om-Dek"/>
                                 </connections>
                             </button>
@@ -931,11 +932,12 @@
                         <outlet property="profileButton" destination="Mze-kR-QtD" id="UcH-jd-Nac"/>
                         <outlet property="searchButton" destination="yWV-ZB-czD" id="9LZ-Ji-xC4"/>
                         <outlet property="segmentedControl" destination="bcT-SZ-2Qs" id="ytK-KY-Txg"/>
+                        <segue destination="csS-Ac-eu7" kind="show" identifier="DoneToCreate" id="8B0-eC-JbT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CgM-hP-J1h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4654" y="1468"/>
+            <point key="canvasLocation" x="-7150" y="1238"/>
         </scene>
         <!--Search Screen View Controller-->
         <scene sceneID="b4W-wU-uP1">
@@ -1724,13 +1726,13 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Pqf-30-gg9"/>
-        <segue reference="i1a-Z5-6Ir"/>
-        <segue reference="geT-mR-nqS"/>
-        <segue reference="j9s-bL-Ehf"/>
-        <segue reference="Kri-CJ-Nei"/>
-        <segue reference="Y3v-PF-rXs"/>
         <segue reference="SjE-fi-xZh"/>
-        <segue reference="e2e-vQ-8SJ"/>
+        <segue reference="Y3v-PF-rXs"/>
+        <segue reference="MWE-dT-Yxc"/>
         <segue reference="Fzq-WP-Ud6"/>
+        <segue reference="e2e-vQ-8SJ"/>
+        <segue reference="8B0-eC-JbT"/>
+        <segue reference="ImG-8h-47G"/>
+        <segue reference="Aqj-KQ-TNi"/>
     </inferredMetricsTieBreakers>
 </document>
